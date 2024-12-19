@@ -1,0 +1,988 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18181b;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed; /* Torna a navbar fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+.container {
+    
+    background-color: #0f172a;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 235px;
+    height: auto;
+}
+
+.logo img:hover {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+nav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    gap: 30px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0e7490;
+    transition: width 0.3s ease;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+li:hover {
+    color: #f5f5f5;
+    background-color: rgba(14, 116, 144, 0.1);
+    transform: scale(1.1);
+
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0e7490;
+    transition: width 0.3s ease;
+}
+
+li:hover:target  {
+    width: 100%;
+}
+
+li:target  {
+    color: #f5f5f5;
+    background-color: rgba(14, 116, 144, 0.1);
+    transform: scale(1.1);
+
+}
+
+.news i {
+    font-size: 40px;
+    margin-right: 17px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.news i:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.mobile-menu div {
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open div:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+}
+
+.mobile-menu.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 999px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #0f172a;
+        flex-direction: column;
+        gap: 0;
+        padding: 40px 0;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 9999;
+        transition: left 0.3s ease;
+        overflow-x: hidden;
+    }
+
+    nav ul.show {
+        display: flex;
+        left: 0;
+    }
+
+    .config {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    ul li {
+        font-size: 22px;
+        padding: 20px 40px;
+        text-align: center;
+        width: 100%;
+    }
+
+    li:hover {
+        background-color: rgba(14, 116, 144, 0.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .mobile-menu {
+        margin-right: 10px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    li {
+        padding: 12px 18px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-image {
+        margin-bottom: 20px;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .descricao {
+        font-size: 0.9rem;
+    }
+
+    .play-button {
+        width: 100%;
+        max-width: 250px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+.pc img {
+    width: 50px;
+    margin-top: 20px;
+}
+
+.pc img:hover {
+    transform: scale(1.02);
+}
+
+.mobile img {
+    width: 45px;
+    margin-top: 20px;
+
+}
+
+.mobile img:hover {
+    transform: scale(1.02);
+}
+.perifericos {
+
+    display: flex; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Adiciona espaço entre os itens */
+    margin-top: -5px; /* Espaçamento acima do contêiner */
+}
+
+footer {
+    margin-top: auto;
+    background-color: #0f172a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.mobile-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+@media (max-width: 999px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0f172a;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        overflow-y: auto;
+        max-height: calc(100vh - 80px);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .news {
+        display: none;
+        visibility: hidden;
+    }
+
+    .news-mobile.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Estilo da seção de About */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 2px solid #111;
+    background-color: rgb(16, 18, 24);
+}
+
+/* Estilo da imagem do jogo */
+.game-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.game-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #0e7490;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo da seção de informações */
+.info {
+    flex: 2 1 400px;
+    max-width: 600px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 90px;
+}
+
+/* Título */
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+/* Descrição */
+.descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* Botão de Play */
+.play-button {
+    background-color: rgb(0, 176, 111);
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.play-button:hover {
+    background-color: #1472a2;
+    transform: scale(1.05);
+}
+
+.play-button i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+
+@media (max-width: 600px) {
+    .info {
+        margin-top: -40px;
+    }
+
+    .descricao {
+        margin-top: 10px;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.container-stats {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 27px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    width: 100px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.neon-blue {
+    color: #3f87f5;
+    text-shadow: 0 0 10px #3f87f5;
+}
+
+.neon-green {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+}
+
+.neon-orange {
+    color: #ff9800;
+    text-shadow: 0 0 10px #ff9800;
+}
+
+
+.number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #bbb;
+}
+
+/* Container pai para os cards */
+.container-shop {
+    display: flex;
+    flex-wrap: wrap; /* Faz com que os cards se ajustem à linha */
+    gap: 20px; /* Adiciona espaçamento entre os cards */
+    justify-content: space-between; /* Distribui os cards igualmente com espaçamento */
+    padding: 1.5em;
+}
+
+/* Container dos elementos do produto */
+.shop-container {
+    background-color: #21262d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões de ação em linha */
+.btns {
+    display: flex;
+    width: 100%;
+    gap: 0.6em;
+}
+
+/* Animação do efeito pulse */
+@keyframes pulse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Levanta um pouco */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando o efeito ao card */
+.wrapper {
+    position: relative;
+    background-color: #161b22;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 30%; /* Cada card ocupa cerca de 30% da largura do container */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 25%; /* Limita a largura do card */
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Animação de rotação da imagem */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg); /* Posição inicial */
+    }
+    50% {
+        transform: rotate(15deg); /* Gira um pouco */
+    }
+    100% {
+        transform: rotate(0deg); /* Retorna à posição original */
+    }
+}
+
+/* Imagem do produto */
+.imgbox {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background-color: #1f1f2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgbox img {
+    max-width: 100px;
+    height: 100%;
+    object-fit: cover;
+    animation: rotateImage 4s ease-in-out infinite; /* Roda suavemente e continuamente */
+}
+
+/* Detalhes do produto */
+.cardShop.detalhes {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.cardShop.detalhes h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #e6edf3;
+}
+
+.cardShop.detalhes .label {
+    font-size: 0.9em;
+    color: #8b949e;
+    margin-bottom: 0.5em;
+}
+
+.cardShop.detalhes i {
+    color: #ffcc00;
+    font-size: 1.2em;
+}
+
+/* Seção de compra */
+.cardShop.buy {
+    width: 100%;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #3fb950;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.current-price {
+    font-size: 1.4em;
+    color: #3fb950;
+    text-shadow: 4px 4px 4px #111;
+}
+
+.original-price {
+    font-size: 0.9em;
+    color: #ff4d4d;
+    text-decoration: line-through;
+    font-weight: 600;
+    position: absolute;
+    top: -0.10em;
+    left: 185px;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+/* Botão "Comprar" (Buy) */
+.btn-buy {
+    flex: 2;
+    padding: 0.7em;
+    background: linear-gradient(145deg, #238636, #2ea043);
+    color: #f0f6fc;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-buy:hover {
+    background: linear-gradient(145deg, #2ea043, #3fb950);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão "Adicionar ao Carrinho" */
+.btn-cart {
+    flex: 1;
+    padding: 0.7em;
+    background: linear-gradient(145deg, #2f81f7, #3696ff);
+    color: #f0f6fc;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cart i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.btn-cart:hover {
+    background: linear-gradient(145deg, #3696ff, #4fa3ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cart:hover i {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* Efeito ao clicar */
+.btns button:active {
+    transform: translateY(1px);
+}
+
+/* Ícone de Robux */
+.robux-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.2em;
+    vertical-align: middle;
+}
+
+.robux-icon-small {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Para telas até 1075px */
+@media (max-width: 1075px) {
+    .container-shop {
+        gap: 20px;
+        padding: 1.5em;
+    }
+
+    .wrapper {
+        max-width: 48%; /* 2 cards por linha até 1075px */
+        margin-bottom: 1.5em;
+    }
+
+    .shop-container {
+        padding: 1em;
+    }
+
+    .imgbox {
+        height: 120px;
+    }
+
+    .imgbox img {
+        max-width: 120px;
+    }
+
+    .cardShop.detalhes h2 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        font-size: 0.9em;
+        top: -0.05em;
+        left: 160px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .btn-buy, .btn-cart {
+        width: 100%;
+    }
+
+    .btn-cart i {
+        font-size: 1.5em;
+    }
+
+    .imgbox img {
+        animation: rotateImage 6s ease-in-out infinite;
+    }
+}
+
+/* Para telas menores que 700px */
+@media (max-width: 700px) {
+    .container-shop {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para telas menores que 500px */
+@media (max-width: 500px) {
+    .wrapper {
+        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+    }
+}
+
+/* Para telas até 1075px */
+@media (max-width: 1075px) {
+    .container-shop {
+        gap: 20px;
+        padding: 1.5em;
+    }
+
+    .wrapper {
+        max-width: 48%; /* 2 cards por linha até 1075px */
+        margin-bottom: 1.5em;
+    }
+
+    .shop-container {
+        padding: 1em;
+    }
+
+    .imgbox {
+        height: 120px;
+    }
+
+    .imgbox img {
+        max-width: 120px;
+    }
+
+    .cardShop.detalhes h2 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        font-size: 0.9em;
+        top: -0.05em;
+        left: 160px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .btn-buy, .btn-cart {
+        width: 100%;
+    }
+
+    .btn-cart i {
+        font-size: 1.5em;
+    }
+
+    .imgbox img {
+        animation: rotateImage 6s ease-in-out infinite;
+    }
+}
+
+/* Para telas menores que 700px */
+@media (max-width: 700px) {
+    .container-shop {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+    }
+
+    .cardShop.detalhes h2 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        font-size: 0.8em;
+    }
+
+    .imgbox {
+        height: 100px;
+    }
+
+    .imgbox img {
+        max-width: 100px;
+    }
+
+    .btn-buy {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .btn-cart {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .btn-cart i {
+        font-size: 1.3em;
+    }
+}
+
+/* Para telas menores que 500px */
+@media (max-width: 500px) {
+    .wrapper {
+        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+    }
+
+    .price {
+        font-size: 1.1em;
+    }
+
+    .original-price {
+        font-size: 0.8em;
+    }
+
+    .imgbox {
+        height: 90px;
+    }
+
+    .imgbox img {
+        max-width: 90px;
+    }
+
+    .btn-buy {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .btn-cart {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .btn-cart i {
+        font-size: 1.2em;
+    }
+}
+
