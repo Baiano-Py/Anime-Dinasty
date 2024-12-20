@@ -1,29 +1,40 @@
-        // Seleção dos elementos
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navMenu = document.querySelector('nav ul');
-        const newsIcon = document.querySelector('.news');
-        const newsMobile = document.querySelector('.news-mobile');
-        
-        mobileMenu.addEventListener('click', () => {
-            // Alterna a classe 'show' no menu de navegação
-            navMenu.classList.toggle('show');
-            
-            // Alterna a visibilidade do ícone de notícias para dispositivos móveis
-            if (navMenu.classList.contains('show')) {
-                newsMobile.style.visibility = 'visible';  // Torna visível
-                newsMobile.style.pointerEvents = 'auto';  // Permite interação
-            } else {
-                newsMobile.style.visibility = 'hidden';  // Torna invisível
-                newsMobile.style.pointerEvents = 'none';  // Desabilita interação
-            }
+// Seleção dos elementos
+const mobileMenu = document.querySelector('.mobile-menu');
+const navMenu = document.querySelector('nav ul');
+const newsIcon = document.querySelector('.news');
+const newsMobile = document.querySelector('.news-mobile');
+const navLinks = document.querySelectorAll('nav ul li a');
 
-            // Alterna a visibilidade do ícone de notícias para a versão de desktop
-            newsIcon.style.display = navMenu.classList.contains('show') ? 'none' : 'flex';
-            
-            // Alterna a classe 'open' no botão de menu (responsável pela animação)
-            mobileMenu.classList.toggle('open');
-            
-            // Impede a rolagem da página ao abrir o menu
-            document.body.classList.toggle('no-scroll');
-        });
+// Função para fechar o menu
+function closeMenu() {
+    navMenu.classList.remove('show');
+    mobileMenu.classList.remove('open');
+    newsMobile.style.visibility = 'hidden';
+    newsMobile.style.pointerEvents = 'none';
+    newsIcon.style.display = 'flex';
+    document.body.classList.remove('no-scroll');
+}
 
+// Evento para o botão do menu mobile
+mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+
+    if (navMenu.classList.contains('show')) {
+        newsMobile.style.visibility = 'visible';
+        newsMobile.style.pointerEvents = 'auto';
+    } else {
+        newsMobile.style.visibility = 'hidden';
+        newsMobile.style.pointerEvents = 'none';
+    }
+
+    newsIcon.style.display = navMenu.classList.contains('show') ? 'none' : 'flex';
+    mobileMenu.classList.toggle('open');
+    document.body.classList.toggle('no-scroll');
+});
+
+// Evento para cada link de navegação
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenu();
+    });
+});

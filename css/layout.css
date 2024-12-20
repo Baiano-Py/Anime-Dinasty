@@ -384,6 +384,9 @@ footer {
     .mobile-menu {
         display: block;
     }
+    .about{
+        width: 100%
+   }
 }
 
 /* Estilo da seção de About */
@@ -485,7 +488,16 @@ footer {
 
     .descricao {
         margin-top: 10px;
+        margin-left: 14px;
     }
+
+    .titulo {
+        margin-left: 12px;
+
+    }
+    .about{
+        width: 450px;
+   }
 }
 
 .no-scroll {
