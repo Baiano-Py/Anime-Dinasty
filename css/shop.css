@@ -1,0 +1,399 @@
+/* Container pai para os cards */
+.container-shop {
+    display: flex;
+    flex-wrap: wrap; /* Faz com que os cards se ajustem à linha */
+    gap: 20px; /* Adiciona espaçamento entre os cards */
+    justify-content: space-evenly; /* Distribui os cards igualmente com espaçamento */
+    padding: 1.5em;
+}
+
+/* Container dos elementos do produto */
+.shop-container {
+    background-color: #21262d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões de ação em linha */
+.btns {
+    display: flex;
+    width: 100%;
+    gap: 0.6em;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+/* Animação do efeito pulse */
+@keyframes pulse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Levanta um pouco */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando o efeito ao card */
+.wrapper {
+    position: relative;
+    background-color: #161b22;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 22%; /* Cada card ocupa cerca de 22% da largura do container */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 22%; /* Limita a largura do card */
+    min-width: 300px; /* Garante que o card nunca ficará menor que 200px */
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Animação de rotação da imagem */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg); /* Posição inicial */
+    }
+    50% {
+        transform: rotate(15deg); /* Gira um pouco */
+    }
+    100% {
+        transform: rotate(0deg); /* Retorna à posição original */
+    }
+}
+
+/* Imagem do produto */
+.imgbox {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background-color: #1f1f2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgbox img {
+    max-width: 100px;
+    height: 100%;
+    object-fit: cover;
+    animation: rotateImage 4s ease-in-out infinite; /* Roda suavemente e continuamente */
+}
+
+/* Detalhes do produto */
+.cardShop.detalhes {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.cardShop.detalhes h2, .cardShop.detalhes .label {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #e6edf3;
+    overflow-wrap: break-word; /* Faz a quebra da linha se o texto for muito grande */
+    word-wrap: break-word; /* Para garantir compatibilidade */
+    max-width: 100%; /* Limita a largura do elemento */
+    white-space: normal; /* Permite quebra de linha */
+}
+
+/* Limite no texto do preço */
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #3fb950;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%; /* Limita a largura */
+}
+
+/* Limite nos textos da descrição (label) */
+.cardShop.detalhes .label {
+    font-size: 0.9em;
+    color: #8b949e;
+    margin-bottom: 0.5em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.cardShop.detalhes i {
+    color: #ffcc00;
+    font-size: 1.2em;
+}
+
+/* Seção de compra */
+.cardShop.buy {
+    width: 100%;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #3fb950;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.current-price {
+    font-size: 1.4em;
+    color: #3fb950;
+    text-shadow: 4px 4px 4px #111;
+}
+
+.original-price {
+    font-size: 0.9em;
+    color: #ff4d4d;
+    text-decoration: line-through;
+    font-weight: 600;
+    position: absolute;
+    top: -0.10em;
+    left: 185px;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+/* Botão "Comprar" (Buy) */
+.btn-buy {
+    flex: 2;
+    padding: 0.7em;
+    background: linear-gradient(145deg, #238636, #2ea043);
+    color: #f0f6fc;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-buy:hover {
+    background: linear-gradient(145deg, #2ea043, #3fb950);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão "Adicionar ao Carrinho" */
+.btn-cart {
+    flex: 1;
+    padding: 0.7em;
+    background: linear-gradient(145deg, #2f81f7, #3696ff);
+    color: #f0f6fc;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cart i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.btn-cart:hover {
+    background: linear-gradient(145deg, #3696ff, #4fa3ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cart:hover i {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* Efeito ao clicar */
+.btns button:active {
+    transform: translateY(1px);
+}
+
+/* Ícone de Robux */
+.robux-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.2em;
+    vertical-align: middle;
+}
+
+.robux-icon-small {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Para telas até 1075px */
+@media (max-width: 1075px) {
+    .container-shop {
+        gap: 20px;
+        padding: 1.5em;
+    }
+
+    .wrapper {
+        width: 600px; 
+        min-width: 300px;
+        margin-bottom: 1.5em;
+    }
+
+    .shop-container {
+        padding: 1em;
+    }
+
+    .imgbox {
+        height: 120px;
+    }
+
+    .imgbox img {
+        max-width: 120px;
+    }
+
+    .cardShop.detalhes h2 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        font-size: 0.9em;
+        top: -0.05em;
+        left: 160px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .btn-buy, .btn-cart {
+        width: 100%;
+    }
+
+    .btn-cart i {
+        font-size: 1.5em;
+    }
+
+    .imgbox img {
+        animation: rotateImage 6s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 700px) {
+    .container-shop {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 300px; 
+        min-width: 300px;
+    }
+
+    .cardShop.detalhes h2 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        font-size: 0.8em;
+    }
+
+    .imgbox {
+        height: 100px;
+    }
+
+    .imgbox img {
+        max-width: 100px;
+    }
+
+    .btn-buy {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .btn-cart {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .btn-cart i {
+        font-size: 1.3em;
+    }
+}
+
+/* Para telas menores que 500px */
+@media (max-width: 500px) {
+    .wrapper {
+        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+    }
+
+    .price {
+        font-size: 1.1em;
+    }
+
+    .original-price {
+        font-size: 0.8em;
+    }
+
+    .imgbox {
+        height: 90px;
+    }
+
+    .imgbox img {
+        max-width: 90px;
+    }
+
+    .btn-buy {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .btn-cart {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .btn-cart i {
+        font-size: 1.2em;
+    }
+
+    
+}
+
