@@ -56,7 +56,7 @@ header {
 }
 
 nav {
-    width: 100%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -388,10 +388,10 @@ footer {
    }
 }
 
-/* Estilo da seção de About */
 .about {
     width: 100%;
-    min-height: 100vh;
+    max-width: 1200px; /* Define a largura máxima */
+    margin: 0 auto;    /* Centraliza o conteúdo */
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -401,9 +401,10 @@ footer {
     background-color: rgb(16, 18, 24);
 }
 
+
 /* Estilo da imagem do jogo */
 .game-image {
-    flex: 1 1 300px;
+    flex: 1 1 55%;
     display: flex;
     justify-content: center;
     align-items: center;
