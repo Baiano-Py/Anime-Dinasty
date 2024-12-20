@@ -53,8 +53,9 @@
     flex: 1 1 22%; /* Cada card ocupa cerca de 22% da largura do container */
     margin-bottom: 20px;
     box-sizing: border-box;
-    width: 22%; /* Limita a largura do card */
-    min-width: 300px; /* Garante que o card nunca ficará menor que 200px */
+    width: 22%; 
+    min-width: 300px; 
+    max-width: 350px;
 }
 
 .wrapper:hover {
