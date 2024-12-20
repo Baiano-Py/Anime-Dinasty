@@ -564,7 +564,7 @@ footer {
     display: flex;
     flex-wrap: wrap; /* Faz com que os cards se ajustem à linha */
     gap: 20px; /* Adiciona espaçamento entre os cards */
-    justify-content: space-between; /* Distribui os cards igualmente com espaçamento */
+    justify-content: space-evenly; /* Distribui os cards igualmente com espaçamento */
     padding: 1.5em;
 }
 
@@ -584,6 +584,10 @@ footer {
     display: flex;
     width: 100%;
     gap: 0.6em;
+}
+
+.btn a {
+    text-decoration: none;
 }
 
 /* Animação do efeito pulse */
@@ -607,10 +611,11 @@ footer {
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 30%; /* Cada card ocupa cerca de 30% da largura do container */
+    flex: 1 1 22%; /* Cada card ocupa cerca de 22% da largura do container */
     margin-bottom: 20px;
     box-sizing: border-box;
-    max-width: 25%; /* Limita a largura do card */
+    width: 22%; /* Limita a largura do card */
+    min-width: 300px; /* Garante que o card nunca ficará menor que 200px */
 }
 
 .wrapper:hover {
@@ -657,17 +662,41 @@ footer {
     margin-bottom: 1em;
 }
 
-.cardShop.detalhes h2 {
+.cardShop.detalhes h2, .cardShop.detalhes .label {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 0.5em;
     color: #e6edf3;
+    overflow-wrap: break-word; /* Faz a quebra da linha se o texto for muito grande */
+    word-wrap: break-word; /* Para garantir compatibilidade */
+    max-width: 100%; /* Limita a largura do elemento */
+    white-space: normal; /* Permite quebra de linha */
 }
 
+/* Limite no texto do preço */
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #3fb950;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%; /* Limita a largura */
+}
+
+/* Limite nos textos da descrição (label) */
 .cardShop.detalhes .label {
     font-size: 0.9em;
     color: #8b949e;
     margin-bottom: 0.5em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
 }
 
 .cardShop.detalhes i {
@@ -795,7 +824,8 @@ footer {
     }
 
     .wrapper {
-        max-width: 48%; /* 2 cards por linha até 1075px */
+        width: 600px; 
+        min-width: 300px;
         margin-bottom: 1.5em;
     }
 
@@ -843,78 +873,6 @@ footer {
     }
 }
 
-/* Para telas menores que 700px */
-@media (max-width: 700px) {
-    .container-shop {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Para telas menores que 500px */
-@media (max-width: 500px) {
-    .wrapper {
-        max-width: 100%; /* 1 card por linha em telas muito pequenas */
-    }
-}
-
-/* Para telas até 1075px */
-@media (max-width: 1075px) {
-    .container-shop {
-        gap: 20px;
-        padding: 1.5em;
-    }
-
-    .wrapper {
-        max-width: 48%; /* 2 cards por linha até 1075px */
-        margin-bottom: 1.5em;
-    }
-
-    .shop-container {
-        padding: 1em;
-    }
-
-    .imgbox {
-        height: 120px;
-    }
-
-    .imgbox img {
-        max-width: 120px;
-    }
-
-    .cardShop.detalhes h2 {
-        font-size: 1.1em;
-    }
-
-    .price {
-        font-size: 1.2em;
-    }
-
-    .original-price {
-        font-size: 0.9em;
-        top: -0.05em;
-        left: 160px;
-    }
-
-    .btns {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
-    .btn-buy, .btn-cart {
-        width: 100%;
-    }
-
-    .btn-cart i {
-        font-size: 1.5em;
-    }
-
-    .imgbox img {
-        animation: rotateImage 6s ease-in-out infinite;
-    }
-}
-
-/* Para telas menores que 700px */
 @media (max-width: 700px) {
     .container-shop {
         flex-direction: column;
@@ -922,7 +880,8 @@ footer {
     }
 
     .wrapper {
-        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+        width: 300px; 
+        min-width: 300px;
     }
 
     .cardShop.detalhes h2 {
@@ -995,4 +954,7 @@ footer {
     .btn-cart i {
         font-size: 1.2em;
     }
+
+    
 }
+
