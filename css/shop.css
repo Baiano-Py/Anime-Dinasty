@@ -1,13 +1,13 @@
 /* Container pai para os cards */
 .container-shop {
     display: flex;
-    flex-wrap: wrap; /* Faz com que os cards se ajustem à linha */
-    gap: 20px; /* Adiciona espaçamento entre os cards */
-    justify-content: space-evenly; /* Distribui os cards igualmente com espaçamento */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-evenly; 
     padding: 1.5em;
 }
 
-/* Container dos elementos do produto */
+
 .shop-container {
     background-color: #21262d;
     display: flex;
@@ -18,7 +18,6 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Botões de ação em linha */
 .btns {
     display: flex;
     width: 100%;
@@ -29,20 +28,7 @@
     text-decoration: none;
 }
 
-/* Animação do efeito pulse */
-@keyframes pulse {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px); /* Levanta um pouco */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
-/* Aplicando o efeito ao card */
 .wrapper {
     position: relative;
     background-color: #161b22;
@@ -50,13 +36,12 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 22%; /* Cada card ocupa cerca de 22% da largura do container */
+    flex: 1 1 22%; 
     margin-bottom: 20px;
     box-sizing: border-box;
     width: 22%; 
     min-width: 300px; 
     max-width: 350px;
-    animation: pulse 3s ease-in-out infinite;
 }
 
 .wrapper:hover {
@@ -64,20 +49,19 @@
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Animação de rotação da imagem */
 @keyframes rotateImage {
     0% {
-        transform: rotate(0deg); /* Posição inicial */
+        transform: rotate(0deg); 
     }
     50% {
-        transform: rotate(15deg); /* Gira um pouco */
+        transform: rotate(15deg); 
     }
     100% {
-        transform: rotate(0deg); /* Retorna à posição original */
+        transform: rotate(0deg); 
     }
 }
 
-/* Imagem do produto */
+
 .imgbox {
     width: 100%;
     height: 120px;
@@ -94,7 +78,7 @@
     max-width: 100px;
     height: 100%;
     object-fit: cover;
-    animation: rotateImage 4s ease-in-out infinite; /* Roda suavemente e continuamente */
+    animation: rotateImage 4s ease-in-out infinite; 
 }
 
 /* Detalhes do produto */
@@ -108,10 +92,10 @@
     font-weight: 600;
     margin-bottom: 0.5em;
     color: #e6edf3;
-    overflow-wrap: break-word; /* Faz a quebra da linha se o texto for muito grande */
-    word-wrap: break-word; /* Para garantir compatibilidade */
-    max-width: 100%; /* Limita a largura do elemento */
-    white-space: normal; /* Permite quebra de linha */
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    max-width: 100%; 
+    white-space: normal; 
 }
 
 /* Limite no texto do preço */
@@ -201,7 +185,6 @@
 
 .btn-buy:hover {
     background: linear-gradient(145deg, #2ea043, #3fb950);
-    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -399,3 +382,315 @@
     
 }
 
+/* Botão no estado de seleção */
+.btn-select {
+    background-color: #28a745;
+}
+
+.btn-select:hover {
+    background-color: #218838;
+}
+
+/* Botão no estado de remoção (X) */
+.btn-remove {
+    background-color: #dc3545;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+/* Contador fixo */
+.counter-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #161b22;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    font-size: 18px;
+}
+
+.counter-container.invisible {
+    display: none; /* Está invisível quando a classe "invisible" está aplicada */
+}
+
+.counter-container.visible {
+    display: flex; /* Exibe quando a classe "visible" está aplicada */
+}
+
+.btn-finalize {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalize:hover {
+    background-color: #218838;
+}
+/* Modal - Fundo escuro */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com maior opacidade */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.3s ease; /* Suaviza a transição do modal */
+}
+
+/* Modal Conteúdo */
+.modal-content {
+    background: #2a2a2a; /* Cor de fundo escura */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    width: 450px; /* Tamanho ajustado */
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao redor */
+    animation: slideIn 0.5s ease-out; /* Efeito de animação suave ao abrir */
+}
+
+/* Animação de abertura do modal */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Aumente o valor para mover o X para a direita */
+    font-size: 25px;
+    color: #f1f1f1; /* Cor clara para o botão */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff4081; /* Cor suave de destaque no hover */
+}
+
+/* Títulos e textos */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+/* Cart Itens */
+#cart-items {
+    margin-top: 20px;
+    max-height: 300px; /* Limite para rolagem */
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que as gamepasses se ajustem em várias linhas */
+    justify-content: center; /* Centraliza os itens */
+}
+
+/* Ajuste para a gamepass */
+.card {
+    width: 100px; /* Reduz o tamanho da gamepass */
+    margin: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 80px; /* Ajusta o tamanho da imagem */
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card .btn-cart {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn-cart:hover {
+    background-color: #e91e63; /* Cor de hover para o botão */
+}
+
+/* Itens do carrinho */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* Efeito de hover nos itens do carrinho */
+.cart-item:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o item ao passar o mouse */
+    background-color: #444; /* Escurece um pouco mais no hover */
+}
+
+/* Imagem do item */
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* Informações do item */
+.cart-item-info {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    color: #ccc; /* Cor suave para o texto */
+}
+
+/* Botão de Remover */
+.cart-item .remove-btn {
+    cursor: pointer;
+    color: #ff4081; /* Cor para o botão de remoção */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.remove-btn {
+    margin-left: 10px;
+}
+
+/* Cor de hover no botão de remoção */
+.cart-item .remove-btn:hover {
+    color: #ff0000; /* Cor vermelha para hover */
+}
+
+/* Total de Robux no modal */
+#cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+/* Botões do modal (Comprar, Cancelar) */
+.modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px; /* Adiciona um espaçamento entre os botões */
+    margin-top: 30px;
+}
+
+/* Estilo dos botões */
+.btn-cancel, .btn-buy {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Botão Cancelar */
+.btn-cancel {
+    background-color: #f44336; /* Cor vermelha para o botão de cancelar */
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f; /* Cor mais intensa para o hover */
+}
+
+/* Botão Comprar */
+.btn-buy {
+    background-color: #ff4081; /* Cor de fundo do botão de comprar */
+    color: white;
+}
+
+.btn-buy:hover {
+    background-color: #e91e63; /* Cor mais intensa no hover */
+}
+
+/* Para a área do modal que tem o conteúdo rolável */
+.modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 20px; /* Espaço para a barra de rolagem */
+}
+
+/* Customização do scroll (barra de rolagem) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+    border: 2px solid #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: #2c2c2c;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desabilitar rolagem da página quando o modal estiver aberto */
+body.modal-open {
+    overflow: hidden; /* Impede rolagem da página */
+}
+
+/* Adicionando um estilo ao fundo para indicar que o modal está aberto */
+body.modal-open {
+    padding-right: 15px; /* Evita o corte da rolagem devido à adição da barra de rolagem */
+}
