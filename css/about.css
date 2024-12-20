@@ -516,12 +516,12 @@ footer {
     margin-top: 27px;
 }
 
-.card {
+.card-stats {
     transition: transform 0.3s ease;
     width: 100px;
 }
 
-.card:hover {
+.card-stats:hover {
     transform: translateY(-10px);
 }
 
@@ -554,7 +554,7 @@ footer {
     margin: 0;
 }
 
-.card p {
+.card-stats p {
     font-size: 1rem;
     margin-top: 0.5rem;
     color: #bbb;
