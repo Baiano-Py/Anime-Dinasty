@@ -15,7 +15,6 @@ body {
 }
 
 header {
-    position: fixed; /* Torna a navbar fixa no topo */
     top: 0;
     left: 0;
     width: 100%;
@@ -997,4 +996,3 @@ footer {
         font-size: 1.2em;
     }
 }
-
