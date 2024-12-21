@@ -694,3 +694,9 @@ body.modal-open {
 body.modal-open {
     padding-right: 15px; /* Evita o corte da rolagem devido à adição da barra de rolagem */
 }
+
+@media (max-width: 500px) {
+    p {
+        font-size: 15px;
+    }
+}
