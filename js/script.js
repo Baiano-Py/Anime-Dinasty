@@ -22,14 +22,19 @@ mobileMenu.addEventListener('click', () => {
     if (navMenu.classList.contains('show')) {
         newsMobile.style.visibility = 'visible';
         newsMobile.style.pointerEvents = 'auto';
+        newsIcon.style.display = 'none';
     } else {
         newsMobile.style.visibility = 'hidden';
         newsMobile.style.pointerEvents = 'none';
+        newsIcon.style.display = 'flex';
     }
 
-    newsIcon.style.display = navMenu.classList.contains('show') ? 'none' : 'flex';
     mobileMenu.classList.toggle('open');
-    document.body.classList.toggle('no-scroll');
+
+    // Remove 'no-scroll' ao abrir o menu mobile
+    if (document.body.classList.contains('no-scroll')) {
+        document.body.classList.remove('no-scroll');
+    }
 });
 
 // Evento para cada link de navegação
@@ -38,14 +43,14 @@ navLinks.forEach(link => {
         closeMenu();
     });
 });
+
 let selectedCount = 0;
 let totalRobux = 0;
 let cartItems = []; // Armazenar os itens selecionados
 
 // Função para alternar a seleção dos cards
 function toggleCardSelection(button, price, name) {
-    // Encontra o card que contém o botão clicado
-    const card = button.closest('.wrapper'); // Assuming the button is inside a .card div
+    const card = button.closest('.wrapper'); // Encontra o card que contém o botão clicado
     const image = card.querySelector('img'); // Pega o <img> dentro do card
 
     if (image) {
@@ -136,24 +141,18 @@ function openModal() {
 
 // Função para remover um item do carrinho
 function removeItem(name, price) {
-    // Remove o item da lista de carrinho
-    cartItems = cartItems.filter(item => item.name !== name);
-    
-    // Atualiza o contador de itens e o total de Robux
+    cartItems = cartItems.filter(item => item.name !== name); // Remove o item
     selectedCount--;
     totalRobux -= price;
 
-    // Atualiza o contador
+    // Atualiza o contador e o modal
     updateCounter();
-
-    // Atualiza o modal com a nova lista
     openModal();
 }
 
 // Função para fechar o modal
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
-    resetSelection();
 
     // Ativa novamente o scroll do body
     document.body.classList.remove('no-scroll');
@@ -174,4 +173,3 @@ function resetSelection() {
     // Limpa o carrinho
     cartItems = [];
 }
-
