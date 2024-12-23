@@ -18,6 +18,7 @@
             <div class="logo">
                 <img src="/img/logo.png" alt="Logo do anime dinasty">
             </div>
+            
             <nav>
                 <ul>
                     <li onclick="window.location.href='#about'"><a href="#about">About</a></li>
@@ -42,17 +43,24 @@
 
     <section class="about" id="about" style="margin-top: -60px;">
         <div class="game-image">
-            <img src="/img/game-image.png" alt="Anime Dinasty Simulator Cover Image">
+            <img class="img" src="/img/game-image.png" alt="Anime Dinasty Simulator Cover Image">
+            
         </div>
+        
         <div class="info">
             <div  translate="no" class="titulo">[BETA! 🔍] Anime Dinasty Simulator</div>
+            <div class="grupo">
+                <p translate="no">By: Entertainment Rush</p>
+            </div>
             <div class="descricao">
                 In a world full of challenges, your goal is to become the strongest! Obtain Knights, Princes, and Kings to help you on your epic journey. Explore different worlds, complete quests, and gain attributes to become even more powerful. Prove your worth, defeat enemies, and stay on top. Good luck!
             </div>
             <div class="perifericos">
-
+            
             <button onclick="window.location.href='https://www.roblox.com/games/18806227420/BETA-Anime-Dinasty-Simulator#!/game-instances';" class="play-button" title="Click to start the game">
                 <i class="fas fa-play"></i> Play
+            
+            
         </div>
         <div class="container-stats">
             <div class="card-stats">
@@ -68,9 +76,10 @@
             <div class="card-stats">
                 <i class="fas fa-user icon neon-orange"></i>
                 <h2 translate="no" id="game-likes"class="number">125+</h2>
-                <p>Group Members</p>
+                <p>Favorites</p>
             </div>
         </div>
+
     </div>
     </section>
 
@@ -430,7 +439,7 @@
                     <p>Total: <span id="total-price">0</span> Robux</p>
                 </div>
                 <div class="modal-buttons">
-                    <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button class="btn-cancel" id="cancel-button" onclick="closeModal()">Cancel</button>
                     <button class="btn-buy" onclick="window.open('https://www.roblox.com/games/18806227420/BETA-Anime-Dinasty-Simulator#!/store', '_blank');">Buy</button>
                 </div>
             </div>

@@ -3,7 +3,11 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const navMenu = document.querySelector('nav ul');
 const newsIcon = document.querySelector('.news');
 const newsMobile = document.querySelector('.news-mobile');
-const navLinks = document.querySelectorAll('nav ul li a');
+const navItems = document.querySelectorAll('nav ul li'); // Seleciona os <li>
+
+let selectedCount = 0;
+let totalRobux = 0;
+let cartItems = []; // Armazenar os itens selecionados
 
 // Função para fechar o menu
 function closeMenu() {
@@ -12,7 +16,7 @@ function closeMenu() {
     newsMobile.style.visibility = 'hidden';
     newsMobile.style.pointerEvents = 'none';
     newsIcon.style.display = 'flex';
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('no-scroll'); // Reativa o scroll
 }
 
 // Evento para o botão do menu mobile
@@ -23,30 +27,33 @@ mobileMenu.addEventListener('click', () => {
         newsMobile.style.visibility = 'visible';
         newsMobile.style.pointerEvents = 'auto';
         newsIcon.style.display = 'none';
+
+        // Desativa o scroll
+        document.body.classList.add('no-scroll');
     } else {
-        newsMobile.style.visibility = 'hidden';
-        newsMobile.style.pointerEvents = 'none';
-        newsIcon.style.display = 'flex';
+        closeMenu(); // Fecha o menu e ativa o scroll
     }
 
     mobileMenu.classList.toggle('open');
-
-    // Remove 'no-scroll' ao abrir o menu mobile
-    if (document.body.classList.contains('no-scroll')) {
-        document.body.classList.remove('no-scroll');
-    }
 });
 
-// Evento para cada link de navegação
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        closeMenu();
+// Evento para cada item <li> no menu
+navItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const link = item.querySelector('a'); // Encontra o link dentro do <li>
+        if (link) {
+            e.preventDefault(); // Evita o comportamento padrão do link
+            const targetId = link.getAttribute('href'); // Obtém o id da seção
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                // Rola para a seção correspondente
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        closeMenu(); // Fecha o menu
     });
 });
-
-let selectedCount = 0;
-let totalRobux = 0;
-let cartItems = []; // Armazenar os itens selecionados
 
 // Função para alternar a seleção dos cards
 function toggleCardSelection(button, price, name) {
@@ -172,4 +179,40 @@ function resetSelection() {
 
     // Limpa o carrinho
     cartItems = [];
+}
+
+// Função para cancelar a seleção e limpar o carrinho
+function cancelSelection() {
+    // Zera os contadores e limpa o carrinho
+    selectedCount = 0;
+    totalRobux = 0;
+    cartItems = [];
+
+    // Atualiza os contadores na tela
+    updateCounter();
+
+    // Remove os itens do carrinho exibido no modal
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = '';
+
+    // Atualiza o total no modal para 0
+    document.getElementById('total-price').innerText = '0';
+
+    // Oculta o modal, se estiver aberto
+    closeModal();
+
+    // Reseta os botões de seleção no menu
+    document.querySelectorAll('.btn-cart').forEach(button => {
+        button.innerHTML = '🛒'; // Ícone do carrinho
+        button.classList.remove('selected'); // Remove a classe de seleção
+    });
+
+    // Oculta o contador do menu, se necessário
+    document.getElementById('counter-container').style.display = 'none';
+}
+
+// Adicionar o evento de clique ao botão de cancelamento
+const cancelButton = document.getElementById('cancel-button'); // Substitua pelo ID real do botão
+if (cancelButton) {
+    cancelButton.addEventListener('click', cancelSelection);
 }
