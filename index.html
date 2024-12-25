@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime dinasty</title>
+    <title translate="no">Anime dinasty</title>
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/overview.css">
+    <link rel="stylesheet" href="/css/codes.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -23,7 +26,7 @@
                 <ul>
                     <li onclick="window.location.href='#about'"><a href="#about">About</a></li>
                     <li onclick="window.location.href='#shop'"><a href="#shop">Shop</a></li>
-                    <li><a href="#overview">Overview</a></li>
+                    <li onclick="window.location.href='#overview'"><a href="#overview">Overview</a></li>
                     <li><a href="#team">Team</a></li>
                     <li class="news-mobile" style="visibility: hidden; pointer-events: none;">
                         <a href="#news">News</a>
@@ -36,7 +39,7 @@
                 <div class="line3"></div>
             </div>
             <div class="news">
-                <i class="fa-solid fa-newspaper"></i>
+                <i id="codes" onclick="openCodeModal()" class="fa-brands fa-twitter"></i>
             </div>
         </div>
     </header>
@@ -446,7 +449,95 @@
         </div>
         
     </section>
-      
+    
+    <section id="overview">
+        <div class="container-Overview">
+            <div class="card-Overview">
+                <div class="Overview-image"></div>
+                <div class="Overview-content">
+                    <div class="Overview-title">Alien World</div>
+                    <div class="Overview-description">
+                        This is the first map of the anime Dynasty, featuring various systems and game modes.
+                    </div>
+                    <div class="Overview-button">
+                        <button>Play Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-Overview">
+                <div class="Overview-image"></div>
+                <div class="Overview-content">
+                    <div class="Overview-title">Another World</div>
+                    <div class="Overview-description">
+                        This map has unique challenges and gameplay modes.
+                    </div>
+                    <div class="Overview-button">
+                        <button>Play Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicione mais cards aqui -->
+        </div>
+        
+    </section>
+
+
+<!-- Modal para exibir os itens do carrinho -->
+<div id="code-modal" class="modal">
+    <div class="modal-content">
+        <h2>Code List</h2>
+        <div id="cart-items">
+            <!-- Itens do carrinho já estilizados -->
+            <div class="cart-item">
+                <strong style="color: white; margin-right: 30px;">Release</strong>
+                <div class="cart-item-info">
+                    <img src="/img/gamepass/+3Equip.png" alt="Code 1">  <span class="item-quantity1">1</span>
+                    <img src="/img/gamepass/2xPower.png" alt="Code 2">  <span class="item-quantity2">1</span>
+                    <img src="/img/gamepass/LargeBg.png" alt="Code 3"> <span class="item-quantity3">2</span>
+                    <img src="/img/gamepass/SuperLuck.png" alt="Code 4"> <span class="item-quantity4">3</span>
+                </div>
+            </div>
+            <!-- Itens do carrinho já estilizados -->
+            <div class="cart-item">
+                <strong style="color: white; margin-right: 30px;">Patch 1</strong>
+                <div class="cart-item-info">
+                    <img src="/img/gamepass/Luck.png" alt="Code 1">  <span class="item-quantity1">6</span>
+                    <img src="/img/gamepass/SuperLuck.png" alt="Code 2"> <span class="item-quantity2">1</span>
+                    <img src="/img/gamepass/SmallBag.png" alt="Code 3"> <span class="item-quantity3">2</span>
+                    <img src="/img/gamepass/Magnet.png" alt="Code 4"> <span class="item-quantity4">3</span>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <strong style="color: white; margin-right: 30px;">Patch 2</strong>
+                <div class="cart-item-info">
+                    <img src="/img/gamepass/Teleport.png" alt="Code 1">  <span class="item-quantity1">2</span>
+                    <img src="/img/gamepass/+3Equip.png" alt="Code 2">  <span class="item-quantity2">1</span>
+                    <img src="/img/gamepass/MultiOpen.png" alt="Code 3"> <span class="item-quantity3">2</span>
+                    <img src="/img/gamepass/FastOpen.png" alt="Code 4"> <span class="item-quantity4">3</span>
+                </div>
+            </div>
+            <!-- Itens do carrinho já estilizados -->
+            <div class="cart-item">
+                <strong style="color: white; margin-right: 30px;">Patch 3</strong>
+                <div class="cart-item-info">
+                    <img src="/img/gamepass/2xPower.png" alt="Code 1">  <span class="item-quantity1">3</span>
+                    <img src="/img/gamepass/2xCrowns.png" alt="Code 2">  <span class="item-quantity2">1</span>
+                    <img src="/img/gamepass/SmallBag.png" alt="Code 3">  <span class="item-quantity3">2</span>
+                    <img src="/img/gamepass/LargeBg.png" alt="Code 4">  <span class="item-quantity4">3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeCodeModal()">Fechar</button>
+        </div>
+    </div>
+</div>
+
+
+
+
     <script src="/js/script.js"></script>
 </body>
 </html>

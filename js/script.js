@@ -216,3 +216,19 @@ const cancelButton = document.getElementById('cancel-button'); // Substitua pelo
 if (cancelButton) {
     cancelButton.addEventListener('click', cancelSelection);
 }
+
+// Função para abrir o modal
+function openCodeModal() {
+    document.getElementById('code-modal').style.display = 'flex';
+
+    // Adicionando códigos dinamicamente (Exemplo)
+    const codesList = document.getElementById('codes-list');
+
+    // Exemplo de um código, você pode gerar isso dinamicamente ou com base em dados
+
+}
+
+// Função para fechar o modal
+function closeCodeModal() {
+    document.getElementById('code-modal').style.display = 'none';
+}
