@@ -561,8 +561,7 @@ h2 {
 
 /* Efeito de hover nos itens do carrinho */
 .cart-item:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o item ao passar o mouse */
-    background-color: #444; /* Escurece um pouco mais no hover */
+    background-color: #444;
 }
 
 /* Imagem do item */
@@ -702,62 +701,42 @@ body.modal-open {
 }
 
 .cart-item {
-    position: relative; /* Necessário para o posicionamento absoluto funcionar */
+    position: relative;
+    margin-bottom: 20px; /* Espaçamento entre os itens */
 }
 
-.cart-item img {
+.cart-item-info {
+    display: flex;
+
+}
+
+.item-wrapper {
+    position: relative; /* Necessário para posicionar a quantidade dentro da imagem */
+}
+
+.item-wrapper img:hover {
+    background-color: #111111bb;
+}
+
+.item-wrapper img {
     width: 50px;
     height: 50px;
-    margin-right: 15px;
     border-radius: 5px;
-    position: relative; /* Para posicionar o número sobre a imagem */
+    display: block; /* Evitar margens indesejadas */
 }
 
-.item-quantity1 {
+.item-quantity {
     position: absolute;
-    top: 40px; /* Posiciona o número no topo da imagem */
-    right: 230px; /* Ajuste para alinhamento no canto superior direito */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 2px 6px;
-    border-radius: 10px;
+    top: 25px;  /* Ajusta a posição para ficar acima da imagem */
+    right: 13px; /* Ajusta a posição para ficar no canto superior direito */
+    width: 20px; /* Tamanho da bola */
+    height: 20px; /* Tamanho da bola */
+    background-color: rgb(15, 15, 15); /* Cor do fundo da bola */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Torna a quantidade circular */
     font-size: 12px;
     font-weight: bold;
 }
-
-.item-quantity2 {
-    position: absolute;
-    top: 40px; /* Posiciona o número no topo da imagem */
-    right: 160px; /* Ajuste para alinhamento no canto superior direito */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.item-quantity3 {
-    position: absolute;
-    top: 40px; /* Posiciona o número no topo da imagem */
-    right: 90px; /* Ajuste para alinhamento no canto superior direito */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.item-quantity4 {
-    position: absolute;
-    top: 40px; /* Posiciona o número no topo da imagem */
-    right: 20px; /* Ajuste para alinhamento no canto superior direito */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: bold;
-}
-

@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/shop.css">
     <link rel="stylesheet" href="/css/overview.css">
-    <link rel="stylesheet" href="/css/codes.css">
+    
+    <link rel="stylesheet" href="/css/team.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img//favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -27,9 +28,9 @@
                     <li onclick="window.location.href='#about'"><a href="#about">About</a></li>
                     <li onclick="window.location.href='#shop'"><a href="#shop">Shop</a></li>
                     <li onclick="window.location.href='#overview'"><a href="#overview">Overview</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li class="news-mobile" style="visibility: hidden; pointer-events: none;">
-                        <a href="#news">News</a>
+                    <li  onclick="window.location.href='#team'"><a href="#team">Team</a></li>
+                    <li class="news-mobile" id="codes" onclick="openCodeModal()" style="visibility: hidden; pointer-events: none;">
+                        <a href="#news">Codes</a>
                     </li>
                 </ul>
             </nav>
@@ -340,7 +341,7 @@
         <div class="wrapper" style="margin-top: 50px;">
             <div class="shop-container">
                 <div class="imgbox">
-                    <img src="/img/gamepass/+3Equip.png">
+                    <img src="/img/gamepass/3Equip.png">
                 </div>
                 <div class="cardShop detalhes">
                     <h2>+3 Knights Equipped</h2>
@@ -453,14 +454,14 @@
     <section id="overview">
         <div class="container-Overview">
             <div class="card-Overview">
-                <div class="Overview-image"></div>
+                <div class="Overview-image"><img src="/img/Star/Dragon-ball.PNG" alt=""></div>
                 <div class="Overview-content">
                     <div class="Overview-title">Alien World</div>
                     <div class="Overview-description">
                         This is the first map of the anime Dynasty, featuring various systems and game modes.
                     </div>
                     <div class="Overview-button">
-                        <button>Play Now</button>
+                        <button onclick="window.location.href='teste.html'">Play Now</button>
                     </div>
                 </div>
             </div>
@@ -481,61 +482,249 @@
         
     </section>
 
+    <section class="team" id="team">
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Ruster.jpeg" alt=""></div>
+                    <h2>Ruster</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/1136080974229274635', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2253297051/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter"onclick="window.open('https://x.com/rusterdev_', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Ruster is the founder and lead programmer of Anime Dynasty, responsible for developing systems and fixing game bugs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/RealDado.jpeg" alt=""></div>
+                    <h2>RealDado</h2>
+                    <p>Ui Maker</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/1136080974229274635', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2253297051/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('https://x.com/rusterdev_', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>RealDado is the founder and UI designer of Anime Dynasty, responsible for creating the visual frames and interfaces for the game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Samu.jpeg" alt=""></div>
+                    <h2>Samu</h2>
+                    <p>Marketing Manager</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/321810236635611136', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/6010506701/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Samu, will be the main person responsible for handling the marketing of Anime Dynasty, focusing on promoting the game and expanding its reach to a wider audience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- Modal para exibir os itens do carrinho -->
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Baiano.jpeg" alt=""></div>
+                    <h2>Baiano</h2>
+                    <p>Web Developer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/1020705100706099200', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/1639598146/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Baiano is a Web Developer for Anime Dynasty, responsible for creating the official website and managing the Discord server.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Pjr.jpeg" alt=""></div>
+                    <h2>PJR201</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/958870716093202494', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/189766219/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('https://x.com/PJR201_Ofc', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>PJR201 is the second programmer of Anime Dynasty, contributing to the development of game features and troubleshooting issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Bru.jpeg" alt=""></div>
+                    <h2>Enderex</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/186548830353752064', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/87918968/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('https://x.com/EnderexDev', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Bru, a programmer from Starx, is assisting with the game through a studio partnership, contributing to the development and improvement of Anime Dynasty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Drix.jpeg" alt=""></div>
+                    <h2>Drix</h2>
+                    <p>Game design</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/772997074290475018', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/1930093698/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>
+                            Drix is the game designer of Anime Dynasty, responsible for creating the game's cover art and visual design elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/Kaka.jpeg" alt=""></div>
+                    <h2>Kaka</h2>
+                    <p>Builder</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/1144058667717628026', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/3928045522/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('https://x.com/KakaDevelopment', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Kaka is the map builder for Anime Dynasty, responsible for designing and creating the game’s environments and levels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img//developers/Cidozo.jpeg" alt=""></div>
+                    <h2>Cidozo</h2>
+                    <p>Developer VFX artist</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/457003623487111168', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/6201911360/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Cidozo is the VFX maker for Anime Dynasty, responsible for creating visual effects that enhance the gameplay experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img src="/img/developers/WhatsApp Image 2024-12-28 at 14.18.11 (1).jpeg" alt=""></div>
+                    <h2>brincha</h2>
+                    <p>Vice-COO</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord" onclick="window.open('https://discord.name/241611716163534849', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2814574815/profile', '_blank');"><img src="/img/roblox.svg" alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Brincha, Vice-COO of Anime Dynasty, is responsible for supporting the management of the game's daily operations, ensuring the efficient execution of internal strategies and processes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+    
+
 <div id="code-modal" class="modal">
     <div class="modal-content">
         <h2>Code List</h2>
         <div id="cart-items">
-            <!-- Itens do carrinho já estilizados -->
-            <div class="cart-item">
-                <strong style="color: white; margin-right: 30px;">Release</strong>
-                <div class="cart-item-info">
-                    <img src="/img/gamepass/+3Equip.png" alt="Code 1">  <span class="item-quantity1">1</span>
-                    <img src="/img/gamepass/2xPower.png" alt="Code 2">  <span class="item-quantity2">1</span>
-                    <img src="/img/gamepass/LargeBg.png" alt="Code 3"> <span class="item-quantity3">2</span>
-                    <img src="/img/gamepass/SuperLuck.png" alt="Code 4"> <span class="item-quantity4">3</span>
+            <div id="cart-items">
+                <div class="cart-item">
+                    <strong style="color: white; margin-right: 30px;">Release</strong>
+                    <div class="cart-item-info">
+                        <div class="item-wrapper">
+                            <img src="/img/gamepass/3Equip.png" alt="Code 1">  
+                            <div class="item-quantity item-quantity1">1</div>
+                        </div>
+                        <div class="item-wrapper">
+                            <img src="/img/gamepass/2xPower.png" alt="Code 2">  
+                            <div class="item-quantity item-quantity2">1</div>
+                        </div>
+                        <div class="item-wrapper">
+                            <img src="/img/gamepass/LargeBg.png" alt="Code 3"> 
+                            <div class="item-quantity item-quantity3">2</div>
+                        </div>
+                        <div class="item-wrapper">
+                            <img src="/img/gamepass/SuperLuck.png" alt="Code 4"> 
+                            <div class="item-quantity item-quantity4">3</div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Outros itens seguem o mesmo padrão -->
             </div>
-            <!-- Itens do carrinho já estilizados -->
-            <div class="cart-item">
-                <strong style="color: white; margin-right: 30px;">Patch 1</strong>
-                <div class="cart-item-info">
-                    <img src="/img/gamepass/Luck.png" alt="Code 1">  <span class="item-quantity1">6</span>
-                    <img src="/img/gamepass/SuperLuck.png" alt="Code 2"> <span class="item-quantity2">1</span>
-                    <img src="/img/gamepass/SmallBag.png" alt="Code 3"> <span class="item-quantity3">2</span>
-                    <img src="/img/gamepass/Magnet.png" alt="Code 4"> <span class="item-quantity4">3</span>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <strong style="color: white; margin-right: 30px;">Patch 2</strong>
-                <div class="cart-item-info">
-                    <img src="/img/gamepass/Teleport.png" alt="Code 1">  <span class="item-quantity1">2</span>
-                    <img src="/img/gamepass/+3Equip.png" alt="Code 2">  <span class="item-quantity2">1</span>
-                    <img src="/img/gamepass/MultiOpen.png" alt="Code 3"> <span class="item-quantity3">2</span>
-                    <img src="/img/gamepass/FastOpen.png" alt="Code 4"> <span class="item-quantity4">3</span>
-                </div>
-            </div>
-            <!-- Itens do carrinho já estilizados -->
-            <div class="cart-item">
-                <strong style="color: white; margin-right: 30px;">Patch 3</strong>
-                <div class="cart-item-info">
-                    <img src="/img/gamepass/2xPower.png" alt="Code 1">  <span class="item-quantity1">3</span>
-                    <img src="/img/gamepass/2xCrowns.png" alt="Code 2">  <span class="item-quantity2">1</span>
-                    <img src="/img/gamepass/SmallBag.png" alt="Code 3">  <span class="item-quantity3">2</span>
-                    <img src="/img/gamepass/LargeBg.png" alt="Code 4">  <span class="item-quantity4">3</span>
-                </div>
-            </div>
-        </div>
+            
 
         <div class="modal-buttons">
             <button class="btn-cancel" onclick="closeCodeModal()">Fechar</button>
         </div>
     </div>
 </div>
-
-
 
 
     <script src="/js/script.js"></script>

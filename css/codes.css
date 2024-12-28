@@ -1,0 +1,145 @@
+/* Tema Dark */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+
+.container-pets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    opacity: 0; 
+    animation: fadeInContent 1s 0.5s forwards; 
+}
+
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+.index-pets {
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.index-pets::-webkit-scrollbar {
+    width: 7px;
+}
+
+.index-pets::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.index-pets::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+.index-pets::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+
+.world-section {
+    background: linear-gradient(90deg, #1a1a1a, #262626);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    margin-left: 250px;
+}
+
+
+.world-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+
+.card-pet-world {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+.image-pet img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.image-pet img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    opacity: 70%;
+}
+
+.info-pet {
+    left: 40px;
+    position: absolute;
+    top: 70px;
+}
+
+.info-pet img {
+    border-radius: 8px;
+}
+
+.index-logo {
+    position: absolute;
+    top: 20px;
+    left: 27px;
+    width: 220px;
+    border: 2px solid rgba(119, 8, 119, 0.527);
+    border-radius: 20px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer; 
+    z-index: 10;
+    border-radius: 50%; 
+}

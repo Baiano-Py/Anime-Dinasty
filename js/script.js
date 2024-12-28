@@ -19,23 +19,26 @@ function closeMenu() {
     document.body.classList.remove('no-scroll'); // Reativa o scroll
 }
 
-// Evento para o botão do menu mobile
-mobileMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+// Função para alternar o estado do menu
+function toggleMenu() {
+    const isMenuOpen = navMenu.classList.contains('show'); // Verifica se o menu está aberto
 
-    if (navMenu.classList.contains('show')) {
+    if (isMenuOpen) {
+        closeMenu(); // Fecha o menu
+    } else {
+        navMenu.classList.add('show'); // Abre o menu
+        mobileMenu.classList.add('open'); // Muda para o ícone de "X"
         newsMobile.style.visibility = 'visible';
         newsMobile.style.pointerEvents = 'auto';
         newsIcon.style.display = 'none';
 
         // Desativa o scroll
         document.body.classList.add('no-scroll');
-    } else {
-        closeMenu(); // Fecha o menu e ativa o scroll
     }
+}
 
-    mobileMenu.classList.toggle('open');
-});
+// Evento de clique no botão do menu
+mobileMenu.addEventListener('click', toggleMenu);
 
 // Evento para cada item <li> no menu
 navItems.forEach(item => {
@@ -225,10 +228,35 @@ function openCodeModal() {
     const codesList = document.getElementById('codes-list');
 
     // Exemplo de um código, você pode gerar isso dinamicamente ou com base em dados
-
 }
 
 // Função para fechar o modal
 function closeCodeModal() {
     document.getElementById('code-modal').style.display = 'none';
 }
+
+
+
+
+// Função para esconder todos os elementos com id="invisible"
+document.querySelectorAll('[id="invisible"]').forEach(element => {
+    element.style.display = 'none'; // Oculta os elementos inicialmente
+});
+
+// Evento para mostrar o info-goku ao clicar no botão com id="goku"
+document.getElementById('goku').addEventListener('click', () => {
+    const infoGoku = document.getElementById('info-goku');
+    if (infoGoku) {
+        infoGoku.style.display = 'block'; // Torna visível o info-goku
+    }
+});
+
+// Exemplo de função para tornar qualquer elemento invisível visível
+function showInvisibleElements() {
+    document.querySelectorAll('[id="invisible"]').forEach(element => {
+        element.style.display = 'block'; // Torna visíveis os elementos com id="invisible"
+    });
+}
+
+// Exemplo: Chame esta função quando necessário
+// showInvisibleElements();
