@@ -238,7 +238,6 @@ footer {
 
 
 .about {
-
     max-width: 1200px; /* Define a largura máxima */
     margin: 0 auto;    /* Centraliza o conteúdo */
     display: flex;
@@ -246,7 +245,7 @@ footer {
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
-    border-bottom: 2px solid #111;
+    border-bottom: 1px solid rgb(56, 72, 102);
     background-color: rgb(16, 18, 24);
 }
 
