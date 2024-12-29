@@ -723,16 +723,16 @@ body.modal-open {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    display: block; /* Evitar margens indesejadas */
+    display: block; 
 }
 
 .item-quantity {
     position: absolute;
-    top: 25px;  /* Ajusta a posição para ficar acima da imagem */
-    right: 13px; /* Ajusta a posição para ficar no canto superior direito */
+    top: 35px;  /* Ajusta a posição para ficar acima da imagem */
+    right: 8px; /* Ajusta a posição para ficar no canto superior direito */
     width: 20px; /* Tamanho da bola */
     height: 20px; /* Tamanho da bola */
-    background-color: rgb(15, 15, 15); /* Cor do fundo da bola */
+    background-color: rgba(15, 15, 15, 0.644); /* Cor do fundo da bola */
     color: white;
     display: flex;
     justify-content: center;
