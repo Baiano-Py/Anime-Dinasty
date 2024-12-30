@@ -88,18 +88,20 @@ function toggleCardSelection(button, price, name) {
     }
 }
 
-// Atualiza o contador na tela e controla a visibilidade do menu
 function updateCounter() {
     document.getElementById('selected-count').innerText = selectedCount;
     document.getElementById('total-robux').innerText = totalRobux;
 
-    // Só mostra o menu se houver seleção
+    // Mostra ou esconde o contador do menu
     if (selectedCount > 0) {
         document.getElementById('counter-container').style.display = 'flex';
+        document.querySelector('a#btn-to-top').style.display = 'none'; // Esconde o botão
     } else {
         document.getElementById('counter-container').style.display = 'none';
+        document.querySelector('a#btn-to-top').style.display = 'block'; // Mostra o botão
     }
 }
+
 
 // Função para finalizar a compra e exibir o modal
 function finalizePurchase() {
@@ -258,5 +260,38 @@ function showInvisibleElements() {
     });
 }
 
-// Exemplo: Chame esta função quando necessário
-// showInvisibleElements();
+// Pegamos os elementos principais
+const themePanel = document.getElementById("themePanel");
+const colorBox = document.getElementById("colorBox");
+const color1 = document.getElementById("color1");
+const color2 = document.getElementById("color2");
+const color3 = document.getElementById("color3");
+
+// Inicialmente, o painel está fechado
+let isPanelOpen = false;
+
+// Função para alternar o estado do painel (abrir/fechar)
+themePanel.addEventListener("click", () => {
+    isPanelOpen = !isPanelOpen;
+    themePanel.classList.toggle("open", isPanelOpen); // Controla a expansão
+});
+
+// Funções para mudar o tema
+color1.addEventListener("click", () => {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    colorBox.style.backgroundColor = "#1e3a8a"; // Atualiza a cor predominante
+});
+
+color2.addEventListener("click", () => {
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
+    colorBox.style.backgroundColor = "#10b981"; // Atualiza a cor predominante
+});
+
+color3.addEventListener("click", () => {
+    document.body.classList.remove("dark-theme", "light-theme");
+    document.body.style.backgroundColor = "#f97316"; // Mudança direta
+    colorBox.style.backgroundColor = "#f97316"; // Atualiza a cor predominante
+});
+

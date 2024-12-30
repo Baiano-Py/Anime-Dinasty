@@ -103,7 +103,7 @@
 .price {
     font-size: 1.4em;
     font-weight: 700;
-    color: #3fb950;
+    color: #32943f;
     margin-bottom: 0.8em;
     display: flex;
     align-items: center;
@@ -148,13 +148,13 @@
 }
 
 .current-price {
-    font-size: 1.4em;
+    font-size: 1.0em;
     color: #3fb950;
     text-shadow: 4px 4px 4px #111;
 }
 
 .original-price {
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: #ff4d4d;
     text-decoration: line-through;
     font-weight: 600;
@@ -170,7 +170,7 @@
 .btn-buy {
     flex: 2;
     padding: 0.7em;
-    background: linear-gradient(145deg, #238636, #2ea043);
+    background: linear-gradient(145deg, #0c4918, #208533);
     color: #f0f6fc;
     border: none;
     border-radius: 8px;
@@ -182,10 +182,11 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 .btn-buy:hover {
-    background: linear-gradient(145deg, #2ea043, #3fb950);
+    background: linear-gradient(145deg, #217931, #0e721c);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -193,7 +194,7 @@
 .btn-cart {
     flex: 1;
     padding: 0.7em;
-    background: linear-gradient(145deg, #2f81f7, #3696ff);
+    background: linear-gradient(145deg, #1f55a1, #154f8d);
     color: #f0f6fc;
     border: none;
     border-radius: 8px;
@@ -205,6 +206,7 @@
     justify-content: center;
     gap: 0.3em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 40px;
 }
 
 .btn-cart i {
@@ -213,7 +215,7 @@
 }
 
 .btn-cart:hover {
-    background: linear-gradient(145deg, #3696ff, #4fa3ff);
+    background: linear-gradient(145deg, #2972c0, #125aa8);
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
@@ -401,7 +403,7 @@
     background-color: #c82333;
 }
 
-/* Contador fixo */
+
 .counter-container {
     position: fixed;
     bottom: 0;
@@ -413,17 +415,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    font-size: 18px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Dá um destaque ao container */
 }
 
+
 .counter-container.invisible {
-    display: none; /* Está invisível quando a classe "invisible" está aplicada */
+    display: none; 
 }
 
 .counter-container.visible {
-    display: flex; /* Exibe quando a classe "visible" está aplicada */
+    display: flex; 
 }
 
 .btn-finalize {

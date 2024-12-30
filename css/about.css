@@ -4,19 +4,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    animation: fadeIn 1s forwards; 
 }
 
 
-/* Animação fadeIn */
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Começa invisível */
-    }
-    100% {
-        opacity: 1; /* Fica totalmente visível */
-    }
-}
 
 body {
     background-color: rgb(16, 18, 24);
@@ -520,3 +510,43 @@ footer {
 
 
 }
+
+.btn-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d3748; 
+    color: #ffffff;
+    font-size: 28px; 
+    width: 60px;   
+    height: 60px;  
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+    z-index: 10;
+}
+
+/* Efeito de hover */
+.btn-to-top:hover {
+    background-color: #4a5568;
+    transform: scale(1.1); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8); 
+}
+
+/* Efeito de clique */
+.btn-to-top:active {
+    transform: scale(1.15); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9); 
+}
+
+.btn-to-top i {
+    font-size: 32px;
+    color: #ffffff; 
+}
+
+
+

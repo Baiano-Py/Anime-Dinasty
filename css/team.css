@@ -21,11 +21,12 @@ body {
     padding: 15px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
 
 .container-team:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 .elementos {
