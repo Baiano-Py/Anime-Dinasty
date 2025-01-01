@@ -295,3 +295,15 @@ color3.addEventListener("click", () => {
     colorBox.style.backgroundColor = "#f97316"; // Atualiza a cor predominante
 });
 
+
+window.addEventListener('scroll', function() {
+    var btnToTop = document.getElementById('btn-to-top');
+
+    // Se a página não estiver no topo, mostre o botão
+    if (window.scrollY > 100) {  // Aqui você pode ajustar o valor de 100 conforme necessário
+        btnToTop.style.display = 'block';
+    } else {
+        // Caso contrário, esconda o botão
+        btnToTop.style.display = 'none';
+    }
+});

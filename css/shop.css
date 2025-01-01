@@ -17,6 +17,7 @@
     border-radius: 10px;
     padding: 1em;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+
 }
 
 .btns {
@@ -86,17 +87,27 @@
 .cardShop.detalhes {
     text-align: center;
     margin-bottom: 1em;
+    display: flex; /* Habilita o alinhamento flexível */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: space-between; /* Distribui o espaço igualmente */
+    height: 150px; /* Define uma altura fixa para garantir uniformidade */
 }
 
-.cardShop.detalhes h2, .cardShop.detalhes .label {
+/* Título e rótulos */
+.cardShop.detalhes h2, 
+.cardShop.detalhes .label {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 0.5em;
     color: #e6edf3;
-    overflow-wrap: break-word; 
-    word-wrap: break-word; 
-    max-width: 100%; 
-    white-space: normal; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.4em; /* Define o espaçamento entre linhas */
+    display: -webkit-box; /* Permite limitar o número de linhas */
+    -webkit-box-orient: vertical; /* Define a orientação do texto */
+    overflow: hidden; /* Esconde o texto extra */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
 }
 
 /* Limite no texto do preço */
@@ -114,7 +125,7 @@
     max-width: 100%; /* Limita a largura */
 }
 
-/* Limite nos textos da descrição (label) */
+/* Descrição */
 .cardShop.detalhes .label {
     font-size: 0.9em;
     color: #8b949e;
@@ -123,12 +134,17 @@
     word-wrap: break-word;
     max-width: 100%;
     white-space: normal;
+    line-height: 1.2em; /* Define espaçamento consistente */
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cardShop.detalhes i {
     color: #ffcc00;
     font-size: 1.2em;
 }
+
 
 /* Seção de compra */
 .cardShop.buy {
@@ -177,7 +193,7 @@
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background 10s ease, transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,7 +202,7 @@
 }
 
 .btn-buy:hover {
-    background: linear-gradient(145deg, #217931, #0e721c);
+    background: linear-gradient(145deg, #083311, #175f24);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2c;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.upgrades-container {
+    background-color: #2a2a40;
+    border: 2px solid #4a4a68;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #f4a9d9;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.upgrades-panel, .current-multiplier {
+    background-color: #3a3a50;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+}
+
+.upgrades-panel h2, .current-multiplier h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #7bd7ff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #4a4a68;
+}
+
+.upgrade-name, .stat-name {
+    font-weight: bold;
+}
+
+.upgrade-cost {
+    color: #4aff76;
+}
+
+.stat-value {
+    color: #ffd700;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #f4a9d9;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4b4b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff2b2b;
+}
