@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate="no">Anime dinasty</title>
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/overview.css">
+    <link rel="stylesheet" href="/css/team.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/favicon-32x32_qxd6q9.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/logo_kp86ca.png"
+                        alt="Logo do anime dinasty"></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li onclick="window.location.href='#about'"><a href="#about">About</a></li>
+                    <li onclick="window.location.href='#shop'"><a href="#shop">Shop</a></li>
+                    <li onclick="window.location.href='#overview'"><a href="#overview">Overview</a></li>
+                    <li onclick="window.location.href='#team'"><a href="#team">Team</a></li>
+                    <li class="news-mobile" id="codes" onclick="openCodeModal()"
+                        style="visibility: hidden; pointer-events: none;">
+                        <a href="#news">Codes</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="news">
+                <i id="codes" onclick="openCodeModal()" class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about" style="margin-top: -60px;">
+        <div class="container-about">
+            <div class="info-about">
+                <div class="titulo">
+                    <p>[BETA! 🔍] Anime Dinasty Simulator</p>
+                </div>
+                <div class="descricao">
+                    <p>In a world full of challenges, your goal is to become the strongest! Obtain Knights, Princes, and
+                        Kings to help you on your epic journey. Explore different worlds, complete quests, and gain
+                        attributes to become even more powerful. Prove your worth, defeat enemies, and stay on top. Good
+                        luck!</p>
+                </div>
+            </div>
+
+            <div class="social-about">
+                <div class="button btn-codes"  onclick="openCodeModal()"><i id="codes" class="fa-brands fa-twitter"></i></div>
+                <div class="button btn-group"> <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg" alt=""></div>
+                <div class="button Play"><i class="fa-solid fa-play"></i></div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="card-stats">
+                <i class="fas fa-gamepad icon neon-blue"></i>
+                <h2 translate="no" id="game-visits" class="number">13M+</h2>
+                <p>Visits</p>
+            </div>
+            <div class="card-stats">
+                <i class="fas fa-bolt icon neon-green"></i>
+                <h2 translate="no" id="active-players" class="number">12K+</h2>
+                <p>Playing</p>
+            </div>
+            <div class="card-stats">
+                <i class="fas fa-user icon neon-orange"></i>
+                <h2 translate="no" id="game-likes" class="number">125+</h2>
+                <p>Favorites</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-shop" id="shop">
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441972/2xPower_uisus1.png"
+                        alt="2x Power">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>2x Power</h2>
+                    <p class="label">When you buy the gamepass, you will receive double the power per click.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>299 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/884941905/2x-Power';"
+                            class="btn-buy">Buy</button>
+                        <button class="btn-cart" onclick="toggleCardSelection(this, 299, '2x Power')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #2d2e1faf;">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441971/2xCrowns_udmel2.png"
+                        alt="2x Power">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>2x Crowns</h2>
+                    <p class="label">When you buy this gamepass or defeat any mob, you will receive double the Crowns
+                    </p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>299 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/885442023/2x-Crowns';">Buy</button>
+                        <button class="btn-cart" onclick="toggleCardSelection(this, 299,'2x Crowns')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #2557574d">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441976/AutoClicker_cfruci.png"
+                        alt="2x Power">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Fast Click</h2>
+                    <p class="label">When you buy the gamepass, you will be able to click faster and receive more power.
+                    </p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>399 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/911223617/Magnet';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 399, 'Fast Click')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #1628cf1f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441976/AutoClicker_cfruci.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Auto Clicker</h2>
+                    <p class="label">Enables automatic clicking to collect resources without manual clicks.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>99 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/911881168/Auto-Clicker';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 99, 'Auto Clicker')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #35c9081f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441989/Teleport_wqnk3c.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Teleport</h2>
+                    <p class="label">Instantly teleport to any location in the game without the need to travel manually.
+                    </p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>99 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935382751/Teleport';">Buy</button>
+                        <button class="btn-cart" onclick="toggleCardSelection(this, 99, 'Teleport')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #08c95f1f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441977/FastOpen_rkk6vh.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Fast Open</h2>
+                    <p class="label">When you buy the gamepass, you will be able to open eggs faster, getting better
+                        pets.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>399 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935262791/Fast-Open';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 399, 'Fast Open')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #5bc9281e">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441984/MultiOpen_xezdka.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Multi Open</h2>
+                    <p class="label">When you buy this gamepass, you will be able to open 2 more pets, making it easier
+                        to get better pets.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>499 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935678687/Multi-Open';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 499, 'Multi Open')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #c94f081f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441985/SmallBag_s5sr5f.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Small Backpack</h2>
+                    <p class="label">With this gamepass, you can increase a small portion of your bag's capacity to
+                        store more pets.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>99 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935438789/Small-Bag';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 99, 'Small Backpack')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #c955081f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441979/LargeBg_l0wcd4.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Large Backpack</h2>
+                    <p class="label">With this gamepass, you will have a much larger space in your bag to store pets.
+                    </p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>199 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935068874/Large-Backpack';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 199, 'Large Backpack')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #b6c9081f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441974/3Equip_v0dinl.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>+3 Knights Equipped</h2>
+                    <p class="label">Unlocks 3 additional equipment slots to enhance your character's power.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>499 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935566598/3-Knights-Equipped';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 499, '+3 Knights Equipped')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #66ec281f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441980/Luck_yebmdw.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Lucky</h2>
+                    <p class="label">With this gamepass, you will have your luck slightly increased to receive better
+                        pets.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>99 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935130860/Lucky';">Buy</button>
+                        <button class="btn-cart" onclick="toggleCardSelection(this, 99, 'Lucky')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper" style="margin-top: 50px;">
+            <div class="shop-container">
+                <div class="imgbox" style="background-color: #c5e4141f">
+                    <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441988/SuperLuck_b3igiq.png">
+                </div>
+                <div class="cardShop detalhes">
+                    <h2>Super Lucky</h2>
+                    <p class="label">With this gamepass, you will have much greater luck to receive better pets.</p>
+                    <div class="rating">
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                        <i class="uil uil-star"></i>
+                    </div>
+                </div>
+                <div class="cardShop buy">
+                    <div class="price">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441322/Robux_els9zn.png"
+                            alt="Robux" class="robux-icon">
+                        <span class="current-price">
+                            <p>499 Robux</p>
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button class="btn-buy" type="button"
+                            onclick="window.location.href='https://www.roblox.com/game-pass/935054006/Super-Lucky';">Buy</button>
+                        <button class="btn-cart"
+                            onclick="toggleCardSelection(this, 499, 'Super Lucky')"><i>🛒</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="overview">
+        <div class="container-Overview">
+            <div class="card-Overview">
+                <div class="Overview-image"><img src="/img/Star.PNG" loading="lazy" alt=""></div>
+                <div class="Overview-content">
+                    <div class="Overview-title">Pet Index</div>
+                    <div class="Overview-description">
+                        see the strength of all the pets in the game, their levels and evolutions.
+                    </div>
+                    <div class="Overview-button">
+                        <button onclick="window.location.href='PetIndex.html'">Enter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-Overview">
+                <div class="Overview-image"><img src="/img/RankIcon.PNG" rel="preload" loading="lazy" alt=""></div>
+                <div class="Overview-content">
+                    <div class="Overview-title">Ranks</div>
+                    <div class="Overview-description">
+                        This map has unique challenges and gameplay modes.
+                    </div>
+                    <div class="Overview-button">
+                        <button onclick="window.location.href='rank.html'">Enter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-Overview">
+                <div class="Overview-image"><img src="/img/Upgrades.PNG" rel="preload" loading="lazy"></div>
+                <div class="Overview-content">
+                    <div class="Overview-title">Upgrades</div>
+                    <div class="Overview-description">
+                        This map has unique challenges and gameplay modes.
+                    </div>
+                    <div class="Overview-button">
+                        <button onclick="window.location.href='Upgrades.html'">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="team" id="team">
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443346/Ruster_zkiy3d.jpg"
+                            alt=""></div>
+                    <h2>Ruster</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/1136080974229274635', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2253297051/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter"
+                            onclick="window.open('https://x.com/rusterdev_', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Ruster is the founder and lead programmer of Anime Dynasty, responsible for developing
+                            systems and fixing game bugs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443346/RealDado_w8k78k.jpg"
+                            alt=""></div>
+                    <h2>RealDado</h2>
+                    <p>Ui Maker</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/1136080974229274635', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2253297051/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter"
+                            onclick="window.open('https://x.com/rusterdev_', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>RealDado is the founder and UI designer of Anime Dynasty, responsible for creating the visual
+                            frames and interfaces for the game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443346/Samu_ybb69v.jpg" alt="">
+                    </div>
+                    <h2>Samu</h2>
+                    <p>Marketing Manager</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/321810236635611136', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/6010506701/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Samu, will be the main person responsible for handling the marketing of Anime Dynasty,
+                            focusing on promoting the game and expanding its reach to a wider audience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443337/Baiano_pfmpg5.jpg"
+                            alt=""></div>
+                    <h2>Baiano</h2>
+                    <p>Web Developer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/1020705100706099200', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/1639598146/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Baiano is a Web Developer for Anime Dynasty, responsible for creating the official website
+                            and managing the Discord server.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443338/Pjr_lxzp8e.jpg" alt="">
+                    </div>
+                    <h2>PJR201</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/958870716093202494', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/189766219/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter"
+                            onclick="window.open('https://x.com/PJR201_Ofc', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>PJR201 is the second programmer of Anime Dynasty, contributing to the development of game
+                            features and troubleshooting issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443337/bru_bf74bm.jpg" alt="">
+                    </div>
+                    <h2>Enderex</h2>
+                    <p>programmer</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/186548830353752064', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/87918968/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter"
+                            onclick="window.open('https://x.com/EnderexDev', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Bru, a programmer from Starx, is assisting with the game through a studio partnership,
+                            contributing to the development and improvement of Anime Dynasty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443337/Drix_wpklow.jpg" alt="">
+                    </div>
+                    <h2>Drix</h2>
+                    <p>Game design</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/772997074290475018', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/1930093698/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>
+                            Drix is the game designer of Anime Dynasty, responsible for creating the game's cover art
+                            and visual design elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443337/Kaka_iv3mkv.jpg" alt="">
+                    </div>
+                    <h2>Kaka</h2>
+                    <p>Builder</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/1144058667717628026', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/3928045522/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter"
+                            onclick="window.open('https://x.com/KakaDevelopment', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Kaka is the map builder for Anime Dynasty, responsible for designing and creating the game’s
+                            environments and levels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443337/Cidozo_ooi5zb.jpg"
+                            alt=""></div>
+                    <h2>Cidozo</h2>
+                    <p>Developer VFX artist</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/457003623487111168', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/6201911360/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Cidozo is the VFX maker for Anime Dynasty, responsible for creating visual effects that
+                            enhance the gameplay experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-team">
+            <div class="elementos">
+                <div class="pessoa">
+                    <div class="img-team"><img
+                            src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443347/WhatsApp_Image_2024-12-28_at_14.18.11_1_ycxxvu.jpg"
+                            alt=""></div>
+                    <h2>brincha</h2>
+                    <p>Vice-COO</p>
+                </div>
+                <div class="social">
+                    <div class="botoes">
+                        <i class="fa-brands fa-discord"
+                            onclick="window.open('https://discord.name/241611716163534849', '_blank');"></i>
+                        <i onclick="window.open('https://www.roblox.com/users/2814574815/profile', '_blank');"><img
+                                src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/roblox_ueozbc.svg"
+                                alt=""></i>
+                        <i class="fa-brands fa-twitter" onclick="window.open('', '_blank');"></i>
+                    </div>
+                    <div class="bio">
+                        <p>Brincha, Vice-COO of Anime Dynasty, is responsible for supporting the management of the
+                            game's daily operations, ensuring the efficient execution of internal strategies and
+                            processes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <div class="counter-container invisible" id="counter-container">
+        <p>Selected Items: <span id="selected-count">0</span></p>
+        <p>Total Robux: <span id="total-robux">0</span></p>
+        <button class="btn-finalize" onclick="finalizePurchase()">Finish</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Shopping cart</h2>
+            <div id="cart-items">
+                <!-- Aqui serão listados os itens selecionados -->
+            </div>
+            <div id="cart-total">
+                <p>Total: <span id="total-price">0</span> Robux</p>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" id="cancel-button" onclick="closeModal()">Cancel</button>
+                <button class="btn-buy"
+                    onclick="window.open('https://www.roblox.com/games/18806227420/BETA-Anime-Dinasty-Simulator#!/store', '_blank');">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="code-modal" class="modal">
+        <div class="modal-content">
+            <h2>Code List</h2>
+            <div id="cart-items">
+                <div id="cart-items">
+                    <div class="cart-item">
+                        <strong style="color: white; margin-right: 30px;">Release</strong>
+                        <div class="cart-item-info">
+                            <div class="item-wrapper">
+                                <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443883/Ramen_wtmqqj.png"
+                                    alt="Code 1">
+                                <div class="item-quantity item-quantity1">1</div>
+                            </div>
+                            <div class="item-wrapper">
+                                <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443883/PowerBoost_gyltzo.png"
+                                    alt="Code 2">
+                                <div class="item-quantity item-quantity2">4</div>
+                            </div>
+                            <div class="item-wrapper">
+                                <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443882/LuckBoost_yemkvg.png"
+                                    alt="Code 3">
+                                <div class="item-quantity item-quantity3">2</div>
+                            </div>
+                            <div class="item-wrapper">
+                                <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443882/crownsBoost_okmpda.png"
+                                    alt="Code 4">
+                                <div class="item-quantity item-quantity4">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Outros itens seguem o mesmo padrão -->
+                </div>
+
+                <div class="modal-buttons">
+                    <button class="btn-cancel" onclick="closeCodeModal()">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

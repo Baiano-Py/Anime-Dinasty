@@ -3,90 +3,37 @@ body {
     background-color: #1e1e2c;
     color: #fff;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    overflow: hidden; /* Impede o scroll quando o inventário está aberto */
 }
 
-.upgrades-container {
-    background-color: #2a2a40;
-    border: 2px solid #4a4a68;
-    border-radius: 10px;
-    width: 400px;
-    text-align: center;
-    padding: 20px;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurecimento */
+    backdrop-filter: blur(10px); /* Desfoque */
+    z-index: 1; /* Certifique-se de que fica atrás do inventário */
+    display: none; /* Esconde por padrão */
 }
 
-.header h1 {
-    font-size: 24px;
-    color: #f4a9d9;
-    margin-bottom: 10px;
+.rank-image {
+    position: relative;
+    z-index: 2; /* Garante que o inventário fique acima do overlay */
 }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+.rank-image img {
+    margin: 40px 260px;
+    width: 56%;
+    height: auto;
 }
 
-.upgrades-panel, .current-multiplier {
-    background-color: #3a3a50;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 1;
+/* Quando o inventário é aberto */
+body.show-inventory .overlay {
+    display: block;
 }
 
-.upgrades-panel h2, .current-multiplier h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #7bd7ff;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    border-bottom: 1px solid #4a4a68;
-}
-
-.upgrade-name, .stat-name {
-    font-weight: bold;
-}
-
-.upgrade-cost {
-    color: #4aff76;
-}
-
-.stat-value {
-    color: #ffd700;
-}
-
-.footer {
-    margin-top: 20px;
-}
-
-.footer p {
-    font-size: 12px;
-    color: #f4a9d9;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #ff4b4b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff2b2b;
+body.show-inventory {
+    overflow: hidden; /* Evita o scroll enquanto o inventário está aberto */
 }

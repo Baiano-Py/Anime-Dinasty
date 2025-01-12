@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranks</title>
+    <link rel="stylesheet" href="/css/Upgrades.css">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/favicon-32x32_qxd6q9.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="overlay"></div> <!-- Elemento para desfoque e escurecimento -->
+    <div class="rank-image">
+        <img src="/img/UpgradesBase.png" alt="" class="rank" />
+    </div>
+</body>
+<script>
+    // Seleciona os elementos necessários
+const body = document.body;
+
+// Função para abrir o inventário
+function openInventory() {
+    body.classList.add('show-inventory'); // Adiciona a classe que ativa o overlay
+}
+
+// Função para fechar o inventário
+function closeInventory() {
+    body.classList.remove('show-inventory'); // Remove a classe
+}
+
+// Exemplo: Ativando manualmente
+openInventory(); // Chame essa função ao abrir o inventário
+// closeInventory(); // Chame essa função ao fechar o inventário
+
+</script>
+</html>

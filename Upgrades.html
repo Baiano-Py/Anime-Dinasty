@@ -9,11 +9,28 @@
 
 </head>
 <body>
-    <div class="container-ui">
-        <div class="rank-image">
-            <img src="/img/UpgradesBase.png" alt="" class="rank" />
-        </div>
-
-
+    <div class="overlay"></div> <!-- Elemento para desfoque e escurecimento -->
+    <div class="rank-image">
+        <img src="/img/UpgradesBase.png" alt="" class="rank" />
+    </div>
 </body>
+<script>
+    // Seleciona os elementos necessários
+const body = document.body;
+
+// Função para abrir o inventário
+function openInventory() {
+    body.classList.add('show-inventory'); // Adiciona a classe que ativa o overlay
+}
+
+// Função para fechar o inventário
+function closeInventory() {
+    body.classList.remove('show-inventory'); // Remove a classe
+}
+
+// Exemplo: Ativando manualmente
+openInventory(); // Chame essa função ao abrir o inventário
+// closeInventory(); // Chame essa função ao fechar o inventário
+
+</script>
 </html>
