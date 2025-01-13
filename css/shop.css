@@ -10,7 +10,6 @@
 
 
 .shop-container {
-    background-color: #21262d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,11 +109,11 @@
     text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
 }
 
-/* Limite no texto do preço */
+
 .price {
     font-size: 1.4em;
     font-weight: 700;
-    color: #32943f;
+    color: #1e9912;
     margin-bottom: 0.8em;
     display: flex;
     align-items: center;
@@ -134,7 +133,7 @@
     word-wrap: break-word;
     max-width: 100%;
     white-space: normal;
-    line-height: 1.2em; /* Define espaçamento consistente */
+    line-height: 1.2em; 
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -152,41 +151,11 @@
     text-align: center;
 }
 
-.price {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #3fb950;
-    margin-bottom: 0.8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.current-price {
-    font-size: 1.0em;
-    color: #3fb950;
-    text-shadow: 4px 4px 4px #111;
-}
-
-.original-price {
-    font-size: 0.7em;
-    color: #ff4d4d;
-    text-decoration: line-through;
-    font-weight: 600;
-    position: absolute;
-    top: -0.10em;
-    left: 185px;
-    display: flex;
-    align-items: center;
-    gap: 0.2em;
-}
-
 /* Botão "Comprar" (Buy) */
 .btn-buy {
     flex: 2;
     padding: 0.7em;
-    background: linear-gradient(145deg, #0c4918, #208533);
+    background: linear-gradient(145deg, #136323, #208533);
     color: #f0f6fc;
     border: none;
     border-radius: 8px;
@@ -202,7 +171,7 @@
 }
 
 .btn-buy:hover {
-    background: linear-gradient(145deg, #083311, #175f24);
+    background: linear-gradient(145deg, #0c4918, #208533);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 

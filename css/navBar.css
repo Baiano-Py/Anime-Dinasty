@@ -14,7 +14,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    
 }
+
+
 
 header {
     top: 0;
@@ -44,14 +47,13 @@ header {
 }
 
 .logo img {
-    width: 100%;
-    max-width: 235px;
+    width: 235px;
     height: auto;
 }
 
 .logo img:hover {
     width: 100%;
-    max-width: 250px;
+    width: 250px;
     height: auto;
     cursor: pointer;
 }
@@ -62,6 +64,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
 }
 
 .news {
@@ -161,6 +165,7 @@ li:target  {
     display: none;
     cursor: pointer;
     z-index: 999;
+    
 }
 
 .mobile-menu div {
@@ -284,4 +289,17 @@ footer {
         display: flex;
     }
 
+    .logo {
+        width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        margin-left: 15px;
+    }
+}
+
+.no-scroll {
+    overflow: hidden; 
 }
