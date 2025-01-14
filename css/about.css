@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-* {
-    box-sizing: border-box;
-}
+
 
 .container-about {
     background-image: url(/img/fundo-dragonBall.png);
@@ -145,6 +143,7 @@
 .social-about > .button:hover {
     transform: translateY(-5px); 
     cursor: pointer;
+    
 }
 
 .social-about > .button::before {

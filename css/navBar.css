@@ -14,10 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
 }
-
-
 
 header {
     top: 0;
@@ -302,4 +299,38 @@ footer {
 
 .no-scroll {
     overflow: hidden; 
+}
+
+
+/* Estilo para o botão de voltar ao topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s ease;
+    width: 50px;
+    height: 50px;
+}
+
+#back-to-top i {
+    font-size: 30px;
+    color: white;
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#back-to-top:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px #ffffff;
 }

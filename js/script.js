@@ -253,3 +253,29 @@ function openCodeModal() {
 function closeCodeModal() {
     document.getElementById('code-modal').style.display = 'none';
 }
+
+// Função para mostrar/esconder o botão de voltar ao topo
+function showButton() {
+    const button = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    });
+}
+
+// Função para rolar até o topo da página
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showButton();
+
+    const backToTopButton = document.getElementById('back-to-top');
+    backToTopButton.addEventListener('click', scrollToTop);
+});
+
+

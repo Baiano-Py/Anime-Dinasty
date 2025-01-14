@@ -1,0 +1,334 @@
+/* codes.css */
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #181818;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.container-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.ui {
+    background-image: url(/img/IndexUi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 650px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.ui > .pets {
+    position: absolute;
+    right: 47%;
+    width: 300px;
+    height: 200px;
+
+}
+.ui > .pets > .world1-pets > img {
+    margin-bottom: 5px;
+}
+
+.ui > .pets > .world1-pets > img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.ui > .worlds {
+    width: 260px;
+    height: 265px;
+    margin-top: 55px;
+    margin-left: 368px;
+    transition: 0.3s ;
+    overflow-y: scroll;
+    padding-left: 5px;
+    scrollbar-width: none;
+}
+
+.ui > .worlds::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em WebKit (Chrome, Edge, etc.) */
+}
+.ui > .worlds img {
+    width: 220px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.ui > .worlds .mundo3{
+    border-radius: 10px;
+}
+
+.ui > .worlds .mundo1{
+    border-radius: 10px;
+}
+
+.ui > .worlds .mundo1:hover {
+    transform: scale(1.03);
+    margin-bottom: 5px;
+}
+
+.ui > .worlds .mundo2:hover {
+    transform: scale(1.03);
+    margin-bottom: 5px;
+}
+
+.ui > .worlds .mundo3:hover {
+    transform: scale(1.03);
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1100px) {
+    .ui > .pets {
+        position: absolute;
+        right: 45%;
+        width: 300px;
+        height: 200px;
+    
+    }
+}
+
+@media (max-width: 670px) {
+    .ui {
+        width: 570px;
+    }
+
+    .ui > .worlds {
+        height: 220px;
+        margin-top: 30px;
+        margin-left: 335px;
+    }
+
+    .ui > .worlds img {
+        width: 187px;
+        border-radius: 10px;
+    }
+
+    .ui > .pets > .world1-pets > img {
+        width: 70px;
+    }
+
+    .info-image {
+        width: 150px;
+        left: 290px;
+    }
+
+    .ui > .pets {
+        position: absolute;
+        margin-top: 30px;
+        right: 46%;
+        width: 245px;
+        height: 200px;
+
+    }   
+
+}
+
+
+
+@media (max-width: 570px) {
+    .ui {
+        width: 500px;
+    }
+
+    .ui > .worlds {
+        height: 190px;
+        margin-top: 30px;
+        margin-left: 295px;
+    }
+
+    .ui > .worlds img {
+        width: 160px;
+        border-radius: 10px;
+    }
+
+    .ui > .pets > .world1-pets > img{
+        width: 65px;
+    }
+
+    .info-image {
+        width: 130px;
+        left: 260px;
+    }
+    .ui > .pets {
+        position: absolute;
+        margin-top: 50px;
+        right: 41%;
+        width: 245px;
+        height: 200px;
+
+    }   
+}
+
+@media (max-width: 510px) {
+    .ui {
+        width: 430px;
+    }
+
+    .ui > .worlds {
+        height: 165px;
+        margin-top: 30px;
+        margin-left: 255px;
+    }
+
+    .ui > .worlds img {
+        width: 135px;
+        border-radius: 10px;
+    }
+
+    .ui > .pets > .world1-pets > img {
+        width: 60px;
+    }
+
+    .info-image {
+        width: 110px;
+        left: 230px;
+    }
+
+    .ui > .pets {
+        position: absolute;
+        margin-top: 70px;
+        right: 35%;
+        width: 245px;
+        height: 200px;
+
+    } 
+}
+
+
+@media (max-width: 440px) {
+    .ui {
+        width: 380px;
+    }
+    
+    .ui > .worlds {
+        height: 145px;
+        margin-top: 20px;
+        margin-left: 225px;
+    }
+
+    .ui > .pets > .world1-pets > img{
+        width: 120px;
+        border-radius: 6px;
+    }
+
+    .info-image {
+        width: 110px;
+        left: 200px;
+    }
+
+    .ui > .worlds .mundo3{
+        border-radius: 6px;
+    }
+    
+    .ui > .worlds .mundo1{
+        border-radius: 6px;
+    }
+
+    .ui > .pets img {
+        width: 50px;
+    }
+
+    .ui > .pets {
+        position: absolute;
+        margin-top: 70px;
+        right: 35%;
+        width: 210px;
+        height: 200px;
+
+    } 
+}
+
+@media (max-width: 390px) {
+    .ui {
+        width: 350px;
+    }
+    
+    .ui > .worlds {
+        height: 135px;
+        margin-top: 20px;
+        margin-left: 205px;
+    }
+
+    .ui > .worlds img {
+        width: 110px;
+        border-radius: 6px;
+    }
+
+    .ui > .pets > .world1-pets > img{
+        width: 45px;
+    }
+
+    .info-image {
+        width: 110px;
+        left: 190px;
+    }
+
+    .ui > .pets {
+        position: absolute;
+        margin-top: 90px;
+        right: 36%;
+        width: 190px;
+        height: 200px;
+
+    } 
+}
+
+@media (max-width: 360px) {
+    .ui {
+        width: 320px;
+    }
+
+    .ui > .worlds {
+        height: 132px;
+        margin-top: 20px;
+        margin-left: 185px;
+    }
+
+    .ui > .worlds img {
+        width: 105px;
+        border-radius: 6px;
+    }
+
+    .ui > .pets > .world1-pets > img{ 
+        width: 40px;
+    }
+
+    .info-image {
+        width: 110px;
+        left: 180px;
+    }
+
+    .ui > .pets {
+        position: absolute;
+        margin-top:105px;
+        right: 37%;
+        width: 170px;
+        height: 200px;
+
+    } 
+}

@@ -4,114 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Index</title>
-    <link rel="stylesheet" href="/css/codes.css">
+    <link rel="stylesheet" href="/css/PetIndex.css">
     <link rel="shortcut icon" href="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/favicon-32x32_qxd6q9.png" type="image/x-icon">
+    <style>
+        .hidden { display: none; }
+        .info-image { position: absolute; top: 0px; left: 330px; width: 180px; height: auto /* Ajuste o tamanho e posição conforme necessário */ }
+    </style>
 </head>
 <body>
-    
-    <div class="container-pets">
-        <img class="btn-close" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442538/btn-close_rlnch1.png" alt="" onclick="window.location.href='index.html'">
-        <div class="index-pets">
+    <div class="container-index">
+        <div class="container-ui">
+            <div class="ui">
+                <div class="pets">
+                    <div id="petsMundo1" class="world1-pets">
+                        <img id="pet-goku" onmouseover="showInfo('goku-info')" onmouseout="hideInfo('goku-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442388/Goku_j6ngg1.png" alt="">
+                        <img id="pet-trunks" onmouseover="showInfo('trunks-info')" onmouseout="hideInfo('trunks-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442434/Trunks_irhjfn.png" alt="">
+                        <img id="pet-gohan" onmouseover="showInfo('gohan-info')" onmouseout="hideInfo('gohan-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442384/Gohan_fwhmlm.png" alt="">
+                        <img id="pet-freeza" onmouseover="showInfo('freeza-info')" onmouseout="hideInfo('freeza-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442350/Freeza_ltyhkg.png" alt="">
+                        <img id="pet-brolly" onmouseover="showInfo('brolly-info')" onmouseout="hideInfo('brolly-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442349/brolly_lpelpc.png" alt="">
+                        <img src="/img/secret.PNG" alt="">
+                    </div>
+                    
 
-            <div class="card-pet">
-                <!-- Mundo 1: Dragon Ball -->
-                <div class="world-section">
-                    <h2>Dragon Ball</h2>
-                    <div class="card-pet-world">
-                        <div id="goku" class="image-pet" onclick="tornarVisivel('gokuDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442388/Goku_j6ngg1.png" alt="">
-                        </div>
-                        <div id="trunks" class="image-pet" onclick="tornarVisivel('trunksDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442434/Trunks_irhjfn.png" alt="">
-                        </div>
-                        <div id="gohan" class="image-pet" onclick="tornarVisivel('gohanDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442384/Gohan_fwhmlm.png" alt="">
-                        </div>
-                        <div id="freeza" class="image-pet" onclick="tornarVisivel('freezaDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442350/Freeza_ltyhkg.png" alt="">
-                        </div>
-                        <div id="brolly" class="image-pet" onclick="tornarVisivel('brollyDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442349/brolly_lpelpc.png" alt="">
-                        </div>
+
+                    <img id="goku-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442390/GokuBanner_vondia.png" alt="Goku Info">
+                    <img id="trunks-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442437/TrunksBanner_pxyhb9.png" alt="Trunks Info">
+                    <img id="gohan-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442386/GohanBanner_wz7fdw.png" alt="Gohan Info">
+                    <img id="freeza-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442352/FreezaBanner_qlz7vj.png" alt="Freeza Info">
+                    <img id="brolly-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735444697/BrollyBanner_ndjfcg.png" alt="Brolly Info">
+                    <!-- Imagens de Informações para os novos pets -->
+                    <img id="noelly-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/NoellyBanner_kxtzk5.png" alt="Noelly Info">
+                    <img id="vanessa-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/VanessaBanner_jx7tmq.png" alt="Vanessa Info">
+                    <img id="magma-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/MagmaBanner_dsfjqv.png" alt="Magma Info">
+                    <img id="yuno-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442450/YunoBanner_uew4h1.png" alt="Yuno Info">
+                    <img id="asta-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442347/AstaBanner_jc91cu.png" alt="Asta Info">
+
+                    <!-- Pets do Mundo 2 -->
+                    <div id="petsMundo2" class="world1-pets hidden">
+                        <img id="pet-noelly" onmouseover="showInfo('noelly-info')" onmouseout="hideInfo('noelly-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442417/Noelly_xkyyds.png" alt="Noelly">
+                        <img id="pet-vanessa" onmouseover="showInfo('vanessa-info')" onmouseout="hideInfo('vanessa-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442440/Vanessa_gwr5ue.png" alt="Vanessa">
+                        <img id="pet-magma" onmouseover="showInfo('magma-info')" onmouseout="hideInfo('magma-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442406/Magma_ikfru2.png" alt="Magma">
+                        <img id="pet-yuno" onmouseover="showInfo('yuno-info')" onmouseout="hideInfo('yuno-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442446/Yuno_p47fee.png" alt="Yuno">
+                        <img id="pet-asta" onmouseover="showInfo('asta-info')" onmouseout="hideInfo('asta-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442335/Asta_zdquza.png" alt="Asta">
+                        <img src="/img/secret.PNG" alt="">
+                    </div>
+
+                    <img id="naruto-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/NarutoBanner_b97fjb.png" alt="Naruto Info">
+                    <img id="sakura-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/SakuraBanner_xus2ua.png" alt="Sakura Info">
+                    <img id="sasuke-info" class="info-image hidden" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/SasukeBanner_lhuzi8.png" alt="Sasuke Info">
+                    
+                    <!-- Pets do Mundo 1 (naruto e outros) -->
+                    <div id="petsMundo3" class="world1-pets hidden">
+                        <img id="pet-naruto" onmouseover="showInfo('naruto-info')" onmouseout="hideInfo('naruto-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442414/naruto_hgf5i4.png" alt="Naruto">
+                        <img id="pet-sakura" onmouseover="showInfo('sakura-info')" onmouseout="hideInfo('sakura-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442419/Sakura_irfbxd.png" alt="Sakura">
+                        <img id="pet-sasuke" onmouseover="showInfo('sasuke-info')" onmouseout="hideInfo('sasuke-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442430/sasuke_uxxt6n.png" alt="Sasuke">
+                        <img src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442403/kakashi_guyfri.png" alt="">
+                        <img src="/img/mythicalSoon.PNG" alt="">
+                        <img src="/img/secret.PNG" alt="">
                     </div>
                 </div>
-
-                <!-- Mundo 2: Black Clover -->
-                <div class="world-section">
-                    <h2>Black Clover</h2>
-                    <div class="card-pet-world">
-                        <div id="noelly" class="image-pet" onclick="tornarVisivel('noellyDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442417/Noelly_xkyyds.png" alt="">
-                        </div>
-                        <div id="vanessa" class="image-pet" onclick="tornarVisivel('vanessaDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442440/Vanessa_gwr5ue.png" alt="">
-                        </div>
-                        <div id="magma" class="image-pet" onclick="tornarVisivel('magmaDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442406/Magma_ikfru2.png" alt="">
-                        </div>
-                        <div id="yuno" class="image-pet" onclick="tornarVisivel('yunoDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442446/Yuno_p47fee.png" alt="">
-                        </div>
-                        <div id="asta" class="image-pet" onclick="tornarVisivel('astaDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442335/Asta_zdquza.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mundo 3: Naruto -->
-                <div class="world-section">
-                    <h2>Naruto</h2>
-                    <div class="card-pet-world">
-                        <div id="naruto" class="image-pet" onclick="tornarVisivel('narutoDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442414/naruto_hgf5i4.png" alt="">
-                        </div>
-                        <div id="sakura" class="image-pet" onclick="tornarVisivel('sakuraDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442419/Sakura_irfbxd.png" alt="">
-                        </div>
-                        <div id="sasuke" class="image-pet" onclick="tornarVisivel('sasukeDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442430/sasuke_uxxt6n.png" alt="">
-                        </div>
-                        <div id="kakashi" class="image-pet" onclick="tornarVisivel('kakashiDetalhes')">
-                            <img loading="lazy" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442403/kakashi_guyfri.png" alt="">
-                        </div>
-                    </div>
+                <div class="worlds">
+                    <img id="mundo1" class="mundo1" src="/img/world1.PNG" alt="">
+                    <img id="mundo2" class="mundo2" src="/img/world2.PNG" alt="">
+                    <img id="mundo3" class="mundo3" src="/img/world3.PNG" alt="">
+                    <img id="mundo4" class="mundo4" src="/img/CommingSoon.PNG" alt="">
                 </div>
             </div>
-            <!-- Detalhes dos Pets -->
-        <div class="info-pet">
-            <img loading="lazy" id="gokuDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442390/GokuBanner_vondia.png" Stretch="Uniform" alt="Detalhes do Goku" style="display:none;">
-            <img loading="lazy" id="trunksDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442437/TrunksBanner_pxyhb9.png" alt="Detalhes do Trunks" style="display:none;">
-            <img loading="lazy" id="gohanDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442386/GohanBanner_wz7fdw.png" alt="Detalhes do Gohan" style="display:none;">
-            <img loading="lazy" id="freezaDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442352/FreezaBanner_qlz7vj.png" alt="Detalhes do Freeza" style="display:none;">
-            <img loading="lazy" id="brollyDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735444697/BrollyBanner_ndjfcg.png" alt="Detalhes do Brolly" style="display:none;">
-            <img loading="lazy" id="noellyDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/NoellyBanner_kxtzk5.png" alt="Detalhes do Noelly" style="display:none;">
-            <img loading="lazy" id="vanessaDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/VanessaBanner_jx7tmq.png" alt="Detalhes da Vanessa" style="display:none;">
-            <img loading="lazy" id="magmaDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/MagmaBanner_dsfjqv.png" alt="Detalhes do Magma" style="display:none;">
-            <img loading="lazy" id="yunoDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442450/YunoBanner_uew4h1.png" alt="Detalhes do Yuno" style="display:none;">
-            <img loading="lazy" id="astaDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442347/AstaBanner_jc91cu.png" alt="Detalhes do Asta" style="display:none;">
-            <img loading="lazy" id="narutoDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/NarutoBanner_b97fjb.png" alt="Detalhes do Naruto" style="display:none;">
-            <img loading="lazy" id="sakuraDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/SakuraBanner_xus2ua.png" alt="Detalhes da Sakura" style="display:none;">
-            <img loading="lazy" id="sasukeDetalhes" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735443125/SasukeBanner_lhuzi8.png" alt="Detalhes do Sasuke" style="display:none;">
-            <img loading="lazy" id="kakashiDetalhes" src="/img/pets/KakashiBanner.PNG" alt="Detalhes do Kakashi" style="display:none;">
         </div>
-        </div>
-
-        
     </div>
 
     <script>
-        // Função para tornar visível o elemento com ID personalizado
-        function tornarVisivel(id) {
-            let itens = document.querySelectorAll('.info-pet img');
-            itens.forEach(item => {
-                item.style.display = 'none';  // Esconde todos os itens
-            });
+        // Função para mostrar os pets de um mundo
+        function showPets(mundoId) {
+            // Esconde todos os pets
+            const petsDivs = document.querySelectorAll('.world1-pets');
+            petsDivs.forEach(div => div.classList.add('hidden'));
 
-            let itemVisivel = document.getElementById(id);
-            if (itemVisivel) {
-                itemVisivel.style.display = 'block';  // Torna o item visível
+            // Mostra os pets correspondentes
+            const petsToShow = document.getElementById(mundoId);
+            if (petsToShow) {
+                petsToShow.classList.remove('hidden');
             }
         }
+
+        // Adiciona os eventos de clique para os mundos
+        document.getElementById('mundo1').addEventListener('click', () => showPets('petsMundo1'));
+        document.getElementById('mundo2').addEventListener('click', () => showPets('petsMundo2'));
+        document.getElementById('mundo3').addEventListener('click', () => showPets('petsMundo3'));
+
+
+        // Função para mostrar a imagem de info
+        function showInfo(infoId) {
+            document.getElementById(infoId).classList.remove('hidden');
+        }
+
+        // Função para esconder a imagem de info
+        function hideInfo(infoId) {
+            document.getElementById(infoId).classList.add('hidden');
+        }
+
     </script>
 </body>
 </html>
