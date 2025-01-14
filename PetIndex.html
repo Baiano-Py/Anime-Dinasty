@@ -15,6 +15,8 @@
     <div class="container-index">
         <div class="container-ui">
             <div class="ui">
+                <button id="close-button">X</button>
+
                 <div class="pets">
                     <div id="petsMundo1" class="world1-pets">
                         <img id="pet-goku" onmouseover="showInfo('goku-info')" onmouseout="hideInfo('goku-info')" src="https://res.cloudinary.com/duigb3rfb/image/upload/v1735442388/Goku_j6ngg1.png" alt="">
@@ -103,6 +105,21 @@
             document.getElementById(infoId).classList.add('hidden');
         }
 
+        function inicializarEventos() {
+    const closeButton = document.getElementById('close-button');
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', fecharPetIndex);
+    }
+}
+
+function fecharPetIndex() {
+    window.location.href = '/index.html'; // Redireciona para index.html
+}
+
+// Chame esta função quando a página carregar
+window.onload = inicializarEventos;
+        
     </script>
 </body>
 </html>
