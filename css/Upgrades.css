@@ -1,39 +1,368 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e2c;
-    color: #fff;
+* {
+    padding: 0;
     margin: 0;
-    overflow: hidden; /* Impede o scroll quando o inventário está aberto */
+    box-sizing: border-box;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Escurecimento */
-    backdrop-filter: blur(10px); /* Desfoque */
-    z-index: 1; /* Certifique-se de que fica atrás do inventário */
-    display: none; /* Esconde por padrão */
+body {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    overflow: hidden;
 }
 
-.rank-image {
-    position: relative;
-    z-index: 2; /* Garante que o inventário fique acima do overlay */
+.ui {
+    background-image: url(/img/UpdateUi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 650px;
+    height: 500px;
 }
 
-.rank-image img {
-    margin: 40px 260px;
-    width: 56%;
-    height: auto;
+.ui > .upgrades {
+    position: absolute;
+    width: 275px;
+    height: 120px;
+    margin-top: 180px;
+    margin-left: 75px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* Quando o inventário é aberto */
-body.show-inventory .overlay {
-    display: block;
+.ui > .upgrades > img {
+    width: 265px;
 }
 
-body.show-inventory {
-    overflow: hidden; /* Evita o scroll enquanto o inventário está aberto */
+.ui > .upgrades > img:hover {
+    transform: scale(1.02);
+}
+
+.ui > .upgrades::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ui > .upgrades::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ui > .upgrades::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.ui > .upgrades::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+  .botao {
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: rgba(0, 17, 255, 0);
+    border: none;
+    padding: 12px 61px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+
+  .Damage {
+    top: 5px;
+    right: -18%;
+  }
+
+  .Power {
+    top: 45px;
+    right: -18%;
+  }
+
+  .Chance {
+    top: 84px;
+    right: -18%;
+  }
+
+  .mult {
+    top: 123px;
+    right: -18%;
+  }
+
+
+.ui > .current {
+    position: absolute;
+    width: 205px;
+    height: 180px;
+    margin-top: 180px;
+    margin-left: 395px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.ui > .current > img {
+    width: 175px;
+}
+
+.hidden {
+    display: none;
+}
+
+.botao.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0); /* Fundo escurecido opcional */
+}
+
+
+@media (max-width: 670px) {
+    .ui {
+        width: 570px;
+    }
+
+    .ui > .upgrades {
+        position: absolute;
+        width: 255px;
+        height: 110px;
+        margin-top: 190px;
+        margin-left: 60px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 245px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 187px;
+        margin-left: 345px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+    }
+    
+    .ui > .current > img {
+        width: 155px;
+    }
+    
+}
+
+
+
+@media (max-width: 570px) {
+    .ui {
+        width: 500px;
+    }
+
+    .ui > .upgrades {
+        position: absolute;
+        width: 220px;
+        height: 90px;
+        margin-top: 200px;
+        margin-left: 55px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 210px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 195px;
+        margin-left: 305px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+    }
+    
+    .ui > .current > img {
+        width: 135px;
+    }
+}
+
+@media (max-width: 510px) {
+    .ui {
+        width: 430px;
+    }
+
+    .ui > .upgrades {
+        position: absolute;
+        width: 190px;
+        height: 90px;
+        margin-top: 200px;
+        margin-left: 45px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 180px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 205px;
+        margin-left: 265px;
+    }
+    
+    .ui > .current > img {
+        width: 113px;
+    }
+}
+
+
+@media (max-width: 440px) {
+    .ui {
+        width: 380px;
+    }
+    
+
+    .ui > .upgrades {
+        position: absolute;
+        width: 160px;
+        height: 70px;
+        margin-top: 210px;
+        margin-left: 45px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 150px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 207px;
+        margin-left: 230px;
+ 
+    }
+    
+    .ui > .current > img {
+        width: 101px;
+        
+    }
+}
+
+@media (max-width: 390px) {
+    .ui {
+        width: 350px;
+    }
+    
+    .ui > .upgrades {
+        position: absolute;
+        width: 152px;
+        height: 70px;
+        margin-top: 210px;
+        margin-left: 40px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 140px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 212px;
+        margin-left: 210px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ui > .current > img {
+        width: 100px;
+        
+    }
+}
+
+@media (max-width: 360px) {
+    .ui {
+        width: 320px;
+    }
+
+    .ui > .upgrades {
+        position: absolute;
+        width: 141px;
+        height: 70px;
+        margin-top: 210px;
+        margin-left: 34px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ui > .upgrades > img {
+        width: 130px;
+    }
+
+
+    .ui > .current {
+        position: absolute;
+        width: 205px;
+        height: 180px;
+        margin-top: 215px;
+        margin-left: 192px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ui > .current > img {
+        width: 93px;
+        
+    }
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#close-button:hover {
+    transform: scale(1.1);
+    color: #ff5050;
+}
+
+@media (max-width: 768px) {
+    #close-button {
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #close-button {
+        top: 5px;
+        right: 5px;
+        font-size: 18px;
+    }
 }

@@ -3,34 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranks</title>
+    <title>Upgrades</title>
     <link rel="stylesheet" href="/css/Upgrades.css">
-    <link rel="shortcut icon" href="https://res.cloudinary.com/duigb3rfb/image/upload/v1735441321/favicon-32x32_qxd6q9.png" type="image/x-icon">
-
 </head>
 <body>
-    <div class="overlay"></div> <!-- Elemento para desfoque e escurecimento -->
-    <div class="rank-image">
-        <img src="/img/UpgradesBase.png" alt="" class="rank" />
+    <button id="close-button">X</button>
+    <div class="ui">
+        <div class="upgrades">
+            <!-- Damage upgrade -->
+            <img class="damage1" src="/img/DamageUpgrade1.PNG" alt="">
+            <img class="damage2 hidden" src="/img/DamageUpgrade2.PNG" alt="">
+            <img class="damage3 hidden" src="/img/DamageUpgradeMax.PNG" alt="">
+            <button id="Damage-btn" class="botao Damage"></button>
+
+            <!-- Power upgrade -->
+            <img class="power1" src="/img/PowerUpgrade1.PNG" alt="">
+            <img class="power2 hidden" src="/img/PowerUpgrade2.PNG" alt="">
+            <img class="power3 hidden" src="/img/PowerUpgradeMax.PNG" alt="">
+            <button id="Power-btn" class="botao Power"></button>
+
+            <!-- Chance upgrade -->
+            <img class="chance1" src="/img/ChanceUpgrade1.PNG" alt="">
+            <img class="chance2 hidden" src="/img/ChanceUpgrade2.PNG" alt="">
+            <img class="chance3 hidden" src="/img/ChanceUpgradeMax.PNG" alt="">
+            <button id="Chance-btn" class="botao Chance"></button>
+
+            <!-- Mult upgrade -->
+            <img class="mult1" src="/img/multUpgrade1.PNG" alt="">
+            <img class="mult2 hidden" src="/img/DamageUpgrade2.PNG" alt="">
+            <img class="mult3 hidden" src="/img/DamageUpgradeMax.PNG" alt="">
+            <button id="Mult-btn" class="botao mult"></button>
+        </div>
+
+        <div class="current">
+            <!-- Current state images for Damage -->
+            <img src="/img/CurrentDamage.PNG" alt="">
+            <img class="currentDamage2 hidden" src="/img/CurrentDamage2.PNG" alt="">
+            <img class="currentDamage3 hidden" src="/img/CurrentDamage3.PNG" alt="">
+
+            <!-- Current state images for Power -->
+            <img src="/img/CurrentPower.PNG" alt="">
+            <img class="currentPower2 hidden" src="/img/CurrentPower2.PNG" alt="">
+            <img class="currentPower3 hidden" src="/img/CurrentPower3.PNG" alt="">
+
+            <!-- Current state images for Chance -->
+            <img src="/img/CurrentChance.PNG" alt="">
+            <img class="currentChance2 hidden" src="/img/CurrentChance2.PNG" alt="">
+            <img class="currentChance3 hidden" src="/img/CurrentChance3.PNG" alt="">
+
+            <!-- Current state images for Mult -->
+            <img src="/img/CurrentMult.PNG" alt="">
+            <img class="currentMult2 hidden" src="/img/CurrentMult2.PNG" alt="">
+            <img class="currentMult3 hidden" src="/img/CurrentMult3.PNG" alt="">
+        </div>
     </div>
+
+    <script>
+        // Damage Upgrade
+        const damageBtn = document.getElementById('Damage-btn');
+        const damage1 = document.querySelector('.damage1');
+        const damage2 = document.querySelector('.damage2');
+        const damage3 = document.querySelector('.damage3');
+        const currentDamage1 = document.querySelector('.current img[src="/img/CurrentDamage.PNG"]');
+        const currentDamage2 = document.querySelector('.currentDamage2');
+        const currentDamage3 = document.querySelector('.currentDamage3');
+
+        damageBtn.addEventListener('click', () => {
+            if (!damage1.classList.contains('hidden')) {
+                damage1.classList.add('hidden');
+                damage2.classList.remove('hidden');
+                currentDamage1.classList.add('hidden');
+                currentDamage2.classList.remove('hidden');
+            } else if (!damage2.classList.contains('hidden')) {
+                damage2.classList.add('hidden');
+                damage3.classList.remove('hidden');
+                currentDamage2.classList.add('hidden');
+                currentDamage3.classList.remove('hidden');
+            } else if (!damage3.classList.contains('hidden')) {
+                damageBtn.classList.add('disabled');
+            }
+        });
+
+        // Power Upgrade
+        const powerBtn = document.getElementById('Power-btn');
+        const power1 = document.querySelector('.power1');
+        const power2 = document.querySelector('.power2');
+        const power3 = document.querySelector('.power3');
+        const currentPower1 = document.querySelector('.current img[src="/img/CurrentPower.PNG"]');
+        const currentPower2 = document.querySelector('.currentPower2');
+        const currentPower3 = document.querySelector('.currentPower3');
+
+        powerBtn.addEventListener('click', () => {
+            if (!power1.classList.contains('hidden')) {
+                power1.classList.add('hidden');
+                power2.classList.remove('hidden');
+                currentPower1.classList.add('hidden');
+                currentPower2.classList.remove('hidden');
+            } else if (!power2.classList.contains('hidden')) {
+                power2.classList.add('hidden');
+                power3.classList.remove('hidden');
+                currentPower2.classList.add('hidden');
+                currentPower3.classList.remove('hidden');
+            } else if (!power3.classList.contains('hidden')) {
+                powerBtn.classList.add('disabled');
+            }
+        });
+
+        // Chance Upgrade
+        const chanceBtn = document.getElementById('Chance-btn');
+        const chance1 = document.querySelector('.chance1');
+        const chance2 = document.querySelector('.chance2');
+        const chance3 = document.querySelector('.chance3');
+        const currentChance1 = document.querySelector('.current img[src="/img/CurrentChance.PNG"]');
+        const currentChance2 = document.querySelector('.currentChance2');
+        const currentChance3 = document.querySelector('.currentChance3');
+
+        chanceBtn.addEventListener('click', () => {
+            if (!chance1.classList.contains('hidden')) {
+                chance1.classList.add('hidden');
+                chance2.classList.remove('hidden');
+                currentChance1.classList.add('hidden');
+                currentChance2.classList.remove('hidden');
+            } else if (!chance2.classList.contains('hidden')) {
+                chance2.classList.add('hidden');
+                chance3.classList.remove('hidden');
+                currentChance2.classList.add('hidden');
+                currentChance3.classList.remove('hidden');
+            } else if (!chance3.classList.contains('hidden')) {
+                chanceBtn.classList.add('disabled');
+            }
+        });
+
+        // Mult Upgrade
+        const multBtn = document.getElementById('Mult-btn');
+        const mult1 = document.querySelector('.mult1');
+        const mult2 = document.querySelector('.mult2');
+        const mult3 = document.querySelector('.mult3');
+        const currentMult1 = document.querySelector('.current img[src="/img/CurrentMult.PNG"]');
+        const currentMult2 = document.querySelector('.currentMult2');
+        const currentMult3 = document.querySelector('.currentMult3');
+
+        multBtn.addEventListener('click', () => {
+            if (!mult1.classList.contains('hidden')) {
+                mult1.classList.add('hidden');
+                mult2.classList.remove('hidden');
+                currentMult1.classList.add('hidden');
+                currentMult2.classList.remove('hidden');
+            } else if (!mult2.classList.contains('hidden')) {
+                mult2.classList.add('hidden');
+                mult3.classList.remove('hidden');
+                currentMult2.classList.add('hidden');
+                currentMult3.classList.remove('hidden');
+            } else if (!mult3.classList.contains('hidden')) {
+                multBtn.classList.add('disabled');
+            }
+        });
+
+        function inicializarEventos() {
+    const closeButton = document.getElementById('close-button');
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', fecharPetIndex);
+    }
+}
+
+function fecharPetIndex() {
+    window.location.href = '/index.html'; // Redireciona para index.html
+}
+
+// Chame esta função quando a página carregar
+window.onload = inicializarEventos;
+    </script>
 </body>
-<script>
-    // Seleciona os elementos necessários
-const body = document.body;
-
-// Função para abrir o inventário
-function openInventory() {
-    body.classList.add('show-inventory'); // Adiciona a classe que ativa o overlay
-}
-
-// Função para fechar o inventário
-function closeInventory() {
-    body.classList.remove('show-inventory'); // Remove a classe
-}
-
-// Exemplo: Ativando manualmente
-openInventory(); // Chame essa função ao abrir o inventário
-// closeInventory(); // Chame essa função ao fechar o inventário
-
-</script>
 </html>
