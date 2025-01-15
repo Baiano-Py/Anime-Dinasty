@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 .container-about {
@@ -40,7 +40,9 @@
 
 .info-about > .titulo > p {
     max-width: 600px;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
     font-size: 25px;
     color: white;
 }
@@ -55,11 +57,37 @@
 
 .info-about > .descricao > p {
     max-width: 600px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 20px;
     color: white;
 }
 
+.btn-play {
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-bottom: 70px;
+    width: 300px;
+    height: 50px;
+    background-color: #1da824;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-play:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #1da824c5;
+}
+.btn-play > i {
+    font-size: 40px;
+    color: white;
+}
 
 .stats {
     display: flex;
@@ -73,13 +101,19 @@
 }
 
 .card-stats {
-    transition: transform 0.3s ease;
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Começa escondido */
+    transition: opacity 1s ease, transform 0.3s ease; /* Transição suave para fade e transform */
     width: 30%;
     padding: 1rem;
     border-radius: 8px;
     color: white;
 }
 
+.card-stats.visible {
+    opacity: 1; /* Fica visível */
+    visibility: visible; /* Torna-se visível */
+}
 
 .icon {
     font-size: 2rem;
@@ -117,11 +151,13 @@
 }
 
 
+
 .social-about {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    margin-top: -30px;
     margin-right: 10px;
+
 }
 
 .social-about > .button {
@@ -138,6 +174,8 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
+    margin-bottom: -50px;
+
 }
 
 .social-about > .button:hover {
@@ -178,7 +216,7 @@
 }
 
 .social-about > .Play {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(135deg, #5d6af2, #5d6af2);
 }
 
 .social-about > .btn-group {
@@ -202,10 +240,15 @@
         flex-direction: column;
     }
 
+    .btn-play {
+        margin-bottom: 0;
+    }
+
     .social-about {
         flex-direction: row;
-        gap: 100px;
-        margin-bottom: 30px;
+        gap: 70px;
+        margin-bottom: 100px;
+        margin-left: 60px;
     }
 
 }

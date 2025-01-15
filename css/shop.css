@@ -153,12 +153,11 @@
 
 /* Botão "Comprar" (Buy) */
 .btn-buy {
-    flex: 2;
+    width: 200px;
     padding: 0.7em;
-    background: linear-gradient(145deg, #136323, #208533);
+    background: linear-gradient(145deg, #136323, #136323);
     color: #f0f6fc;
     border: none;
-    border-radius: 8px;
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
@@ -171,13 +170,12 @@
 }
 
 .btn-buy:hover {
-    background: linear-gradient(145deg, #0c4918, #208533);
+    background: linear-gradient(145deg, #11571f, #0e4719);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Botão "Adicionar ao Carrinho" */
 .btn-cart {
-    flex: 1;
     padding: 0.7em;
     background: linear-gradient(145deg, #1f55a1, #154f8d);
     color: #f0f6fc;

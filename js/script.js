@@ -279,3 +279,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card-stats");
+
+    // Ativar a classe "visible" para mostrar as cards com efeito de fade
+    setTimeout(() => {
+        cards.forEach(card => {
+            card.classList.add("visible");
+        });
+    }, 500); // Atraso para criar um efeito mais fluido
+});
