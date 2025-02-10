@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     background-color: rgb(16, 18, 24);
     font-family: 'Roboto', sans-serif;
@@ -20,7 +18,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .container {
@@ -31,7 +29,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-
+    padding: 0 20px;
 }
 
 .logo {
@@ -45,14 +43,13 @@ header {
 }
 
 .logo img {
-    width: 235px;
+    width: 200px;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-    width: 100%;
-    width: 250px;
-    height: auto;
+    transform: scale(1.04);
     cursor: pointer;
 }
 
@@ -61,16 +58,6 @@ nav {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-
-
-}
-
-.news {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -92,7 +79,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 li a {
@@ -119,39 +106,14 @@ li:hover {
     color: #f5f5f5;
     background-color: rgba(14, 116, 144, 0.1);
     transform: scale(1.1);
-
-}
-
-li::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #0e7490;
-    transition: width 0.3s ease;
-}
-
-li:hover:target  {
-    width: 100%;
-}
-
-li:target  {
-    color: #f5f5f5;
-    background-color: rgba(14, 116, 144, 0.1);
-    transform: scale(1.1);
-
 }
 
 .news i {
     font-size: 40px;
     margin-right: 17px;
     color: #ffffff;
-    transition: transform 0.3s ease;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .news i:hover {
     cursor: pointer;
@@ -163,15 +125,13 @@ li:target  {
     display: none;
     cursor: pointer;
     z-index: 999;
-    
 }
 
 .mobile-menu div {
-    width: 40px;
-    height: 5px;
+    width: 32px;
+    height: 3px;
     background-color: #fff;
     margin: 6px 0;
-    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -191,7 +151,6 @@ li:target  {
     bottom: 0;
 }
 
-
 footer {
     margin-top: auto;
     background-color: #0f172a;
@@ -199,36 +158,6 @@ footer {
     padding: 20px;
     text-align: center;
 }
-
-.mobile-menu {
-    display: none;
-    cursor: pointer;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu.open .bar:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 8px;
-}
-
-.mobile-menu.open .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu.open .bar:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -8px;
-}
-
 
 @media (max-width: 999px) {
     nav ul {
@@ -254,10 +183,6 @@ footer {
         left: 0;
     }
 
-    .config {
-        display: none;
-    }
-
     .mobile-menu {
         display: block;
         position: absolute;
@@ -276,12 +201,9 @@ footer {
         background-color: rgba(14, 116, 144, 0.2);
     }
 
-    
     .news {
         display: none;
-        visibility: hidden;
     }
-
 
     .news-mobile.show {
         display: flex;
@@ -299,11 +221,9 @@ footer {
 }
 
 .no-scroll {
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-
-/* Estilo para o botão de voltar ao topo */
 #back-to-top {
     position: fixed;
     bottom: 20px;

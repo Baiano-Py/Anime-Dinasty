@@ -1,74 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+/* Estilos principais do container */
 .container-about {
     background-image: url(/img/fundo-dragonBall.png);
-    background-size: cover; 
-    background-position: center; 
-    position: relative; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 100vh;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .container-about::after {
-    content: ""; 
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.774); 
-    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro */
+    z-index: 1;
 }
 
 .container-about > * {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
-
+/* Seção de informações */
 .info-about {
-    height: 100%; 
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .info-about > .titulo {
-    margin-top: 120px;
-    margin-left: 50px;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 .info-about > .titulo > p {
-    max-width: 600px;
-    font-family: "Poppins", serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-style: normal;
-    font-size: 25px;
+    font-size: 36px;
     color: white;
+    max-width: 600px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transition: font-size 0.3s ease;
 }
 
-
-
 .info-about > .descricao {
-    margin-top: 40px;
-    margin-left: 50px;
-
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in 0.5s forwards;
 }
 
 .info-about > .descricao > p {
-    max-width: 600px;
-    font-family: "Poppins", serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-style: normal;
     font-size: 20px;
-    color: white;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 0.8s forwards;
 }
 
+/* Efeito de Fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de Play */
 .btn-play {
     margin-top: 30px;
-    margin-left: 60px;
-    margin-bottom: 70px;
-    width: 300px;
+    width: 250px;
     height: 50px;
     background-color: #1da824;
     border-radius: 12px;
@@ -76,34 +98,52 @@
     justify-content: center;
     align-items: center;
     border: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1.2s forwards;
 }
 
 .btn-play:hover {
-    cursor: pointer;
-    transform: scale(1.1);
     background-color: #1da824c5;
-}
-.btn-play > i {
-    font-size: 40px;
-    color: white;
+    transform: scale(1.05);
 }
 
+.btn-play > i {
+    font-size: 25px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.btn-play:hover > i {
+    transform: translateX(5px);
+}
+
+/* Seção das estatísticas */
 .stats {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 2rem;
     text-align: center;
-    padding: 0 1rem;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
     border-radius: 20px;
-    height: 25dvh;
+    background: transparent; /* Fundo transparente */
+    transition: transform 0.3s ease;
+}
+
+.card-stats:hover {
+    transform: scale(1.05);
 }
 
 .card-stats {
-    opacity: 0; /* Começa invisível */
-    visibility: hidden; /* Começa escondido */
-    transition: opacity 1s ease, transform 0.3s ease; /* Transição suave para fade e transform */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.3s ease;
     width: 30%;
     padding: 1rem;
     border-radius: 8px;
@@ -111,76 +151,84 @@
 }
 
 .card-stats.visible {
-    opacity: 1; /* Fica visível */
-    visibility: visible; /* Torna-se visível */
+    opacity: 1;
+    visibility: visible;
 }
 
-.icon {
-    font-size: 2rem;
+.card-stats > .icon {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    animation: pulse 1s infinite;
 }
 
-/* Neon Blue */
-.neon-blue {
-    color: #3f87f5;
-    text-shadow: 0 0 10px #3f87f5;
-}
-
-/* Neon Green */
-.neon-green {
-    color: #00ff99;
-    text-shadow: 0 0 10px #00ff99;
-}
-
-/* Neon Orange */
-.neon-orange {
-    color: #ff9800;
-    text-shadow: 0 0 10px #ff9800;
-}
-
-.number {
-    font-size: 2.2rem;
+.card-stats > .number {
+    font-size: 3rem;
     font-weight: bold;
-    margin: 0;
 }
 
-.card-stats p {
+.card-stats > p {
     font-size: 1rem;
     margin-top: 0.5rem;
     color: #bbb;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+.neon-blue {
+    color: #3f87f5;
+    text-shadow: 0 0 20px #3f87f5;
+}
 
+.neon-green {
+    color: #00ff99;
+    text-shadow: 0 0 20px #00ff99;
+}
+
+.neon-orange {
+    color: #ff9800;
+    text-shadow: 0 0 20px #ff9800;
+}
+
+/* Seção Social */
 .social-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -100px;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1.4s forwards;
 }
 
 .social-about > .button {
-    margin-top: 100px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
     background: linear-gradient(135deg, #2d3748, #4a5568);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
-    margin-bottom: -50px;
-
+    cursor: pointer;
 }
 
 .social-about > .button:hover {
-    transform: translateY(-5px); 
-    cursor: pointer;
-    
+    transform: translateY(-5px);
 }
 
 .social-about > .button::before {
@@ -198,28 +246,15 @@
 
 .social-about > .button:hover::before {
     transform: scale(1);
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .social-about > .button > i,
 .social-about > .button > img {
-    position: relative;
     z-index: 1;
-    font-size: 28px;
+    font-size: 25px;
     color: white;
     transition: all 0.3s ease-in-out;
-}
-
-.social-about > .btn-codes {
-    background: linear-gradient(135deg, #3b82f6, #06b6d4);
-}
-
-.social-about > .Play {
-    background: linear-gradient(135deg, #5d6af2, #5d6af2);
-}
-
-.social-about > .btn-group {
-    background: linear-gradient(135deg, #1e293b, #4b5563);
 }
 
 .social-about > .button > img {
@@ -227,40 +262,72 @@
 }
 
 .social-about > .button:hover > i {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .social-about > .button:hover > img {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
+/* Media Queries */
 @media (max-width: 900px) {
     .container-about {
         flex-direction: column;
+        padding: 20px;
     }
 
-    .btn-play {
-        margin-bottom: 0;
+    .info-about {
+        max-width: 100%;
+        padding: 20px;
     }
 
     .social-about {
         flex-direction: row;
-        gap: 70px;
-        margin-bottom: 100px;
-        margin-left: 60px;
+        position: static;
+        margin-top: 30px;
     }
 
+    .btn-play {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 750px) {
-
     .info-about > .titulo > p {
-        font-size: 19px;
-
+        font-size: 28px;
     }
 
     .info-about > .descricao > p {
         font-size: 18px;
+    }
+}
 
+@media (max-width: 600px) {
+    .info-about > .titulo > p {
+        font-size: 24px;
+    }
+
+    .info-about > .descricao > p {
+        font-size: 16px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-stats {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 470px) {
+    .info-about > .titulo > p {
+        font-size: 22px;
+    }
+
+    .info-about > .descricao > p {
+        font-size: 15px;
     }
 }

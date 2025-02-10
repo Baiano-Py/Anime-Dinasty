@@ -1,14 +1,14 @@
-/* Container pai para os cards */
+
 .container-shop {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
     padding: 1.5em;
     border-bottom: 1px solid rgb(56, 72, 102);
 }
 
-
+/* Container dos produtos */
 .shop-container {
     display: flex;
     flex-direction: column;
@@ -16,20 +16,20 @@
     border-radius: 10px;
     padding: 1em;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-
 }
 
+/* Botões dentro do card */
 .btns {
     display: flex;
-    width: 100%;
     gap: 0.6em;
 }
 
+/* Link dos botões */
 .btn a {
     text-decoration: none;
 }
 
-
+/* Wrapper do card */
 .wrapper {
     position: relative;
     background-color: #161b22;
@@ -37,32 +37,27 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 22%; 
+    flex: 1 1 22%;
     margin-bottom: 20px;
     box-sizing: border-box;
-    width: 22%; 
-    min-width: 300px; 
+    min-width: 300px;
     max-width: 350px;
 }
 
+/* Efeito de hover no card */
 .wrapper:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
+/* Animação de rotação */
 @keyframes rotateImage {
-    0% {
-        transform: rotate(0deg); 
-    }
-    50% {
-        transform: rotate(15deg); 
-    }
-    100% {
-        transform: rotate(0deg); 
-    }
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
 }
 
-
+/* Caixa da imagem */
 .imgbox {
     width: 100%;
     height: 120px;
@@ -75,21 +70,22 @@
     justify-content: center;
 }
 
+/* Imagem com animação */
 .imgbox img {
     max-width: 100px;
     height: 100%;
     object-fit: cover;
-    animation: rotateImage 4s ease-in-out infinite; 
+    animation: rotateImage 4s ease-in-out infinite;
 }
 
 /* Detalhes do produto */
 .cardShop.detalhes {
     text-align: center;
     margin-bottom: 1em;
-    display: flex; /* Habilita o alinhamento flexível */
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
-    justify-content: space-between; /* Distribui o espaço igualmente */
-    height: 150px; /* Define uma altura fixa para garantir uniformidade */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
 }
 
 /* Título e rótulos */
@@ -98,18 +94,14 @@
     font-size: 1.2em;
     font-weight: 600;
     color: #e6edf3;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    max-width: 100%;
-    white-space: normal;
-    line-height: 1.4em; /* Define o espaçamento entre linhas */
-    display: -webkit-box; /* Permite limitar o número de linhas */
-    -webkit-box-orient: vertical; /* Define a orientação do texto */
-    overflow: hidden; /* Esconde o texto extra */
-    text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
+    line-height: 1.4em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-
+/* Preço do produto */
 .price {
     font-size: 1.4em;
     font-weight: 700;
@@ -118,10 +110,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    max-width: 100%; /* Limita a largura */
 }
 
 /* Descrição */
@@ -129,21 +117,15 @@
     font-size: 0.9em;
     color: #8b949e;
     margin-bottom: 0.5em;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    max-width: 100%;
-    white-space: normal;
-    line-height: 1.2em; 
-    display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+/* Ícone de destaque */
 .cardShop.detalhes i {
     color: #ffcc00;
     font-size: 1.2em;
 }
-
 
 /* Seção de compra */
 .cardShop.buy {
@@ -151,7 +133,7 @@
     text-align: center;
 }
 
-/* Botão "Comprar" (Buy) */
+/* Botão "Comprar" */
 .btn-buy {
     width: 200px;
     padding: 0.7em;
@@ -161,14 +143,15 @@
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
-    transition: background 10s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
+    border-radius: 8px;
 }
 
+/* Hover no botão "Comprar" */
 .btn-buy:hover {
     background: linear-gradient(145deg, #11571f, #0e4719);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
@@ -192,22 +175,20 @@
     height: 40px;
 }
 
-.btn-cart i {
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
-}
-
+/* Hover no botão "Adicionar ao Carrinho" */
 .btn-cart:hover {
     background: linear-gradient(145deg, #2972c0, #125aa8);
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.btn-cart:hover i {
-    transform: rotate(-10deg) scale(1.1);
+/* Ícone no botão de carrinho */
+.btn-cart i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
 }
 
-/* Efeito ao clicar */
+/* Efeito ao clicar nos botões */
 .btns button:active {
     transform: translateY(1px);
 }
@@ -226,7 +207,7 @@
     vertical-align: middle;
 }
 
-/* Para telas até 1075px */
+/* Responsividade - Para telas até 1075px */
 @media (max-width: 1075px) {
     .container-shop {
         gap: 20px;
@@ -234,8 +215,7 @@
     }
 
     .wrapper {
-        width: 600px; 
-        min-width: 300px;
+        width: 600px;
         margin-bottom: 1.5em;
     }
 
@@ -261,8 +241,6 @@
 
     .original-price {
         font-size: 0.9em;
-        top: -0.05em;
-        left: 160px;
     }
 
     .btns {
@@ -283,6 +261,7 @@
     }
 }
 
+/* Responsividade - Para telas até 700px */
 @media (max-width: 700px) {
     .container-shop {
         flex-direction: column;
@@ -290,8 +269,7 @@
     }
 
     .wrapper {
-        width: 300px; 
-        min-width: 300px;
+        width: 300px;
     }
 
     .cardShop.detalhes h2 {
@@ -314,12 +292,7 @@
         max-width: 100px;
     }
 
-    .btn-buy {
-        padding: 0.5em;
-        font-size: 0.9em;
-    }
-
-    .btn-cart {
+    .btn-buy, .btn-cart {
         padding: 0.5em;
         font-size: 0.9em;
     }
@@ -329,10 +302,10 @@
     }
 }
 
-/* Para telas menores que 500px */
+/* Responsividade - Para telas menores que 500px */
 @media (max-width: 500px) {
     .wrapper {
-        max-width: 100%; /* 1 card por linha em telas muito pequenas */
+        max-width: 100%;
     }
 
     .price {
@@ -351,12 +324,7 @@
         max-width: 90px;
     }
 
-    .btn-buy {
-        font-size: 0.8em;
-        padding: 0.4em;
-    }
-
-    .btn-cart {
+    .btn-buy, .btn-cart {
         font-size: 0.8em;
         padding: 0.4em;
     }
@@ -364,8 +332,6 @@
     .btn-cart i {
         font-size: 1.2em;
     }
-
-    
 }
 
 /* Botão no estado de seleção */
@@ -386,7 +352,7 @@
     background-color: #c82333;
 }
 
-
+/* Contador no rodapé */
 .counter-container {
     position: fixed;
     bottom: 0;
@@ -398,33 +364,39 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Dá um destaque ao container */
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 
+/* Estilo do container de contador */
 .counter-container.invisible {
     display: none; 
 }
 
 .counter-container.visible {
-    display: flex; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Estilo do botão de finalizar */
 .btn-finalize {
     background-color: #28a745;
     color: #fff;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-finalize:hover {
     background-color: #218838;
+    transform: scale(1.05); /* Efeito de aumentar o botão */
 }
+
 /* Modal - Fundo escuro */
 .modal {
     display: none;
@@ -433,25 +405,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com maior opacidade */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    transition: opacity 0.3s ease; /* Suaviza a transição do modal */
+    transition: opacity 0.3s ease;
 }
 
 /* Modal Conteúdo */
 .modal-content {
-    background: #2a2a2a; /* Cor de fundo escura */
+    background: #2a2a2a;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
-    width: 450px; /* Tamanho ajustado */
+    width: 450px;
     max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao redor */
-    animation: slideIn 0.5s ease-out; /* Efeito de animação suave ao abrir */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease-out;
 }
 
 /* Animação de abertura do modal */
@@ -469,71 +441,18 @@
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px; /* Aumente o valor para mover o X para a direita */
+    right: 20px;
     font-size: 25px;
-    color: #f1f1f1; /* Cor clara para o botão */
+    color: #f1f1f1;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-    color: #ff4081; /* Cor suave de destaque no hover */
+    color: #ff4081;
 }
 
-/* Títulos e textos */
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f1f1f1;
-}
-
-/* Cart Itens */
-#cart-items {
-    margin-top: 20px;
-    max-height: 300px; /* Limite para rolagem */
-    overflow-y: auto;
-    text-align: left;
-    padding-right: 5px;
-    display: flex;
-    flex-wrap: wrap; /* Permite que as gamepasses se ajustem em várias linhas */
-    justify-content: center; /* Centraliza os itens */
-}
-
-/* Ajuste para a gamepass */
-.card {
-    width: 100px; /* Reduz o tamanho da gamepass */
-    margin: 10px;
-    background-color: #333;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card img {
-    width: 80px; /* Ajusta o tamanho da imagem */
-    height: 80px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.card .btn-cart {
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-.card .btn-cart:hover {
-    background-color: #e91e63; /* Cor de hover para o botão */
-}
-
-/* Itens do carrinho */
+/* Estilo para os itens do carrinho */
 .cart-item {
     display: flex;
     align-items: center;
@@ -542,20 +461,21 @@ h2 {
     padding: 10px;
     background-color: #333;
     border-radius: 8px;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Efeito de hover nos itens do carrinho */
 .cart-item:hover {
     background-color: #444;
+    transform: translateX(5px); /* Pequeno efeito de movimento */
 }
 
-/* Imagem do item */
+/* Estilo da imagem do item */
 .cart-item img {
     width: 50px;
     height: 50px;
     margin-right: 15px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 /* Informações do item */
@@ -563,27 +483,22 @@ h2 {
     flex: 1;
     text-align: left;
     font-size: 16px;
-    color: #ccc; /* Cor suave para o texto */
+    color: #ccc;
 }
 
 /* Botão de Remover */
 .cart-item .remove-btn {
     cursor: pointer;
-    color: #ff4081; /* Cor para o botão de remoção */
+    color: #ff4081;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-.remove-btn {
-    margin-left: 10px;
+.remove-btn:hover {
+    color: #ff0000;
 }
 
-/* Cor de hover no botão de remoção */
-.cart-item .remove-btn:hover {
-    color: #ff0000; /* Cor vermelha para hover */
-}
-
-/* Total de Robux no modal */
+/* Estilo do total de Robux no modal */
 #cart-total {
     margin-top: 20px;
     font-size: 18px;
@@ -591,52 +506,35 @@ h2 {
     color: #f1f1f1;
 }
 
-/* Botões do modal (Comprar, Cancelar) */
+/* Botões do modal */
 .modal-buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 15px; /* Adiciona um espaçamento entre os botões */
+    gap: 15px;
     margin-top: 30px;
-}
-
-/* Estilo dos botões */
-.btn-cancel, .btn-buy {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
 }
 
 /* Botão Cancelar */
 .btn-cancel {
-    background-color: #f44336; /* Cor vermelha para o botão de cancelar */
+    background-color: #f44336;
     color: white;
 }
 
 .btn-cancel:hover {
-    background-color: #d32f2f; /* Cor mais intensa para o hover */
+    background-color: #d32f2f;
 }
 
 /* Botão Comprar */
 .btn-buy {
-    background-color: #ff4081; /* Cor de fundo do botão de comprar */
+    background-color: #ff4081;
     color: white;
 }
 
 .btn-buy:hover {
-    background-color: #e91e63; /* Cor mais intensa no hover */
+    background-color: #e91e63;
 }
 
-/* Para a área do modal que tem o conteúdo rolável */
-.modal-content {
-    max-height: 80vh;
-    overflow-y: auto;
-    padding-right: 20px; /* Espaço para a barra de rolagem */
-}
-
-/* Customização do scroll (barra de rolagem) */
+/* Personalização do scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -650,7 +548,6 @@ h2 {
 ::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 5px;
-    border: 2px solid #2c2c2c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -661,68 +558,61 @@ h2 {
     display: none;
 }
 
-::-webkit-scrollbar-corner {
-    background: #2c2c2c;
-}
-
 /* Rolagem suave */
 html {
     scroll-behavior: smooth;
 }
 
-/* Desabilitar rolagem da página quando o modal estiver aberto */
+/* Desabilitar rolagem quando o modal estiver aberto */
 body.modal-open {
-    overflow: hidden; /* Impede rolagem da página */
+    overflow: hidden;
 }
 
-/* Adicionando um estilo ao fundo para indicar que o modal está aberto */
-body.modal-open {
-    padding-right: 15px; /* Evita o corte da rolagem devido à adição da barra de rolagem */
-}
-
+/* Responsividade para dispositivos móveis */
 @media (max-width: 500px) {
-    p {
-        font-size: 15px;
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn-finalize {
+        width: 100%;
+        padding: 12px 25px;
+    }
+
+    .cart-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cart-item-info {
+        margin-top: 10px;
+        text-align: center;
     }
 }
 
-.cart-item {
-    position: relative;
-    margin-bottom: 20px; /* Espaçamento entre os itens */
-}
-
-.cart-item-info {
-    display: flex;
-
-}
-
-.item-wrapper {
-    position: relative; /* Necessário para posicionar a quantidade dentro da imagem */
-}
-
-.item-wrapper img:hover {
-    background-color: #111111bb;
-}
-
-.item-wrapper img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    display: block; 
-}
-
-.item-quantity {
+/* Melhorando a usabilidade do botão de remover */
+.cart-item .remove-btn {
     position: absolute;
-    top: 35px;  /* Ajusta a posição para ficar acima da imagem */
-    right: 8px; /* Ajusta a posição para ficar no canto superior direito */
-    width: 20px; /* Tamanho da bola */
-    height: 20px; /* Tamanho da bola */
-    background-color: rgba(15, 15, 15, 0.644); /* Cor do fundo da bola */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Torna a quantidade circular */
-    font-size: 12px;
-    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ff4081;
+    transition: color 0.3s ease;
+}
+
+.cart-item .remove-btn:hover {
+    color: #ff0000;
+}
+
+/* Visual do modal em dispositivos pequenos */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
 }
